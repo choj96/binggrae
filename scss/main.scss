@@ -1,1 +1,78 @@
 @charset "utf-8";
+@charset "utf-8";
+
+@import "abstracts/variables";
+@import "abstracts/mixin";
+@import "base/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: #1f1f1f;
+  line-height: 30px;
+  letter-spacing: -0.09em;
+  word-break: break-all;
+}
+// global
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.inner {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+// layout
+.wrap {
+  position: relative;
+  display: block;
+}
+.wrap > * {
+  width: 100%;
+}
+
+// header
+@import "layout/header";
+
+// visual
+@import "layout/visual";
+
+// product
+@import "layout/product";
+
+// brandshop
+@import "layout/brandshop";
+
+// cs
+@import "layout/cs";
+
+// report
+@import "layout/report";
+
+// footer
+@import "layout/footer";
