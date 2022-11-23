@@ -1,0 +1,49 @@
+.report {
+  .inner {
+    position: relative;
+    display: block;
+    width: 1310px;
+    margin: 0 auto;
+    h3 {
+      font-family: "biggraebold";
+      font-size: 38px;
+      color: #1f1f1f;
+      padding: 140px 0 45px;
+      text-align: center;
+    }
+    .report-list {
+      display: flex;
+      justify-content: space-between;
+      .cyber {
+        position: relative;
+        @include reportBox;
+        > p {
+          font-size: 20px;
+          text-align: center;
+        }
+        @at-root .viewButton {
+          @include viewButton;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 14px;
+        }
+      }
+      .safe {
+        position: relative;
+        @include reportBox;
+        > p {
+          font-size: 20px;
+          text-align: center;
+        }
+        @at-root .viewButton {
+          @include viewButton;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

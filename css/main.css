@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
@@ -68,6 +67,7 @@ body {
   position: relative;
   display: block;
   width: 1310px;
+  margin: 0 auto;
   padding-top: 30px;
 }
 .cs .inner h3 {
@@ -112,10 +112,8 @@ body {
 .email-box p {
   font-size: 16px;
 }
-.email-box a {
+.email-box .viewButton {
   position: absolute;
-  bottom: 50px;
-  left: 40px;
   display: block;
   width: 160px;
   text-align: center;
@@ -124,6 +122,8 @@ body {
   border-radius: 21px;
   color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 40px;
 }
 
 .tel-box {
@@ -187,10 +187,14 @@ body {
   color: #fff;
 }
 .qna-list li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: calc(50% - 26px);
   margin-bottom: 10px;
   background: #f9f9f9;
   border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
   cursor: pointer;
 }
 .qna-list li:nth-child(2n) {
@@ -203,4 +207,98 @@ body {
   font-size: 18px;
   line-height: 80px;
   margin-left: 18px;
+}
+.qna-list li .qna-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  background-color: #ed1c24;
+  border-radius: 50%;
+}
+
+.report .inner {
+  position: relative;
+  display: block;
+  width: 1310px;
+  margin: 0 auto;
+}
+.report .inner h3 {
+  font-family: "biggraebold";
+  font-size: 38px;
+  color: #1f1f1f;
+  padding: 140px 0 45px;
+  text-align: center;
+}
+.report .inner .report-list {
+  display: flex;
+  justify-content: space-between;
+}
+.report .inner .report-list .cyber {
+  position: relative;
+  width: 630px;
+  height: 230px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
+  cursor: pointer;
+  padding-top: 80px;
+}
+.report .inner .report-list .cyber > p {
+  font-size: 20px;
+  text-align: center;
+}
+.viewButton {
+  position: absolute;
+  display: block;
+  width: 160px;
+  text-align: center;
+  line-height: 43px;
+  background: #ed1c24;
+  border-radius: 21px;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.report .inner .report-list .safe {
+  position: relative;
+  width: 630px;
+  height: 230px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
+  cursor: pointer;
+  padding-top: 80px;
+}
+.report .inner .report-list .safe > p {
+  font-size: 20px;
+  text-align: center;
+}
+.viewButton {
+  position: absolute;
+  display: block;
+  width: 160px;
+  text-align: center;
+  line-height: 43px;
+  background: #ed1c24;
+  border-radius: 21px;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.footer .inner {
+  width: 100%;
 }

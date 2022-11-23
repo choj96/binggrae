@@ -3,6 +3,7 @@
     position: relative;
     display: block;
     width: 1310px;
+    margin: 0 auto;
     padding-top: 30px;
     // padding-top 임시로 넣은 높이값
     h3 {
@@ -38,18 +39,10 @@
           p {
             font-size: 16px;
           }
-          a {
-            position: absolute;
+          .viewButton {
+            @include viewButton;
             bottom: 50px;
             left: 40px;
-            display: block;
-            width: 160px;
-            text-align: center;
-            line-height: 43px;
-            background: #ed1c24;
-            border-radius: 21px;
-            color: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
           }
         }
         @at-root .tel-box {
@@ -107,10 +100,14 @@
         }
         @at-root .qna-list {
           li {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
             width: calc(100% / 2 - 52px / 2);
             margin-bottom: 10px;
             background: #f9f9f9;
             border-radius: 30px;
+            box-shadow: inset 0px 5px 10px rgb(121, 121, 121, 0.1);
             cursor: pointer;
             &:nth-child(2n) {
               float: right;
@@ -122,6 +119,19 @@
               font-size: 18px;
               line-height: 80px;
               margin-left: 18px;
+            }
+            .qna-icon {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 18px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 47px;
+              height: 47px;
+              background-color: #ed1c24;
+              border-radius: 50%;
             }
           }
         }
