@@ -21,12 +21,12 @@
       border-radius: 30px;
       box-shadow: 0 5px 24px 3px rgba(0, 0, 0, 0.1);
       .cs-advice {
-        position: relative;
         display: flex;
         justify-content: space-between;
         width: 100%;
         @at-root .email-box {
           @include adviceBox;
+          position: relative;
           background: url(../../images/layout/section_cs/sec04_backimg01.png);
           cursor: pointer;
           h4 {

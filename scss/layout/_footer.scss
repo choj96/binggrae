@@ -1,5 +1,72 @@
 .footer {
   .inner {
     width: 100%;
+    background: #1b1b1b;
+    padding: 27px 45px;
+    .f-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .f-logo {
+      }
+      .f-top-right {
+        > a {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.3);
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .f-main {
+      padding: 30px 0 130px;
+      p {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 24px;
+      }
+    }
+    .f-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .copy {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .f-bottom-right {
+        display: flex;
+        justify-content: space-between;
+        .sns {
+          .sns-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            > li > a {
+              display: block;
+              width: 70px;
+              height: 70px;
+              background: #1b1b1b;
+              box-shadow: 4px 8px 1px rgb(0 0 0 / 3.6),
+                inset 0px 4px 10px 2px rgb(73 73 73 / 1);
+              border-radius: 50%;
+            }
+          }
+        }
+        .flagship {
+          > img {
+          }
+          span {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.3);
+            &::after {
+              background: url(../../images/layout/image_icon/select_btn01.png);
+            }
+          }
+        }
+      }
+    }
   }
 }

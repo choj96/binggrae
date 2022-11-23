@@ -86,7 +86,6 @@ body {
   box-shadow: 0 5px 24px 3px rgba(0, 0, 0, 0.1);
 }
 .cs .inner .content-box .cs-advice {
-  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -99,6 +98,7 @@ body {
   background-size: contain;
   border-radius: 30px;
   padding: 50px 40px;
+  position: relative;
   background: url(../../images/layout/section_cs/sec04_backimg01.png);
   cursor: pointer;
 }
@@ -229,7 +229,7 @@ body {
   margin: 0 auto;
 }
 .report .inner h3 {
-  font-family: "biggraebold";
+  font-family: "binggraebold";
   font-size: 38px;
   color: #1f1f1f;
   padding: 140px 0 45px;
@@ -238,6 +238,7 @@ body {
 .report .inner .report-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 140px;
 }
 .report .inner .report-list .cyber {
   position: relative;
@@ -301,4 +302,60 @@ body {
 
 .footer .inner {
   width: 100%;
+  background: #1b1b1b;
+  padding: 27px 45px;
+}
+.footer .inner .f-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .inner .f-top .f-top-right > a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-right: 30px;
+}
+.footer .inner .f-top .f-top-right > a:last-child {
+  margin-right: 0;
+}
+.footer .inner .f-main {
+  padding: 30px 0 130px;
+}
+.footer .inner .f-main p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+.footer .inner .f-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .inner .f-bottom .copy {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer .inner .f-bottom .f-bottom-right {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .inner .f-bottom .f-bottom-right .sns .sns-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .inner .f-bottom .f-bottom-right .sns .sns-list > li > a {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: #1b1b1b;
+  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgb(73, 73, 73);
+  border-radius: 50%;
+}
+.footer .inner .f-bottom .f-bottom-right .flagship span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer .inner .f-bottom .f-bottom-right .flagship span::after {
+  background: url(../../images/layout/image_icon/select_btn01.png);
 }

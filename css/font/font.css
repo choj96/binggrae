@@ -1,10 +1,9 @@
 @font-face {
   font-family: "binggraebold";
-  src: url("binggrae-bold-webfont.eot");
-  src: url("binggrae-bold-webfont.eot?#iefix") format("embedded-opentype"),
-    url("binggrae-bold-webfont.woff2") format("woff2"),
-    url("binggrae-bold-webfont.woff") format("woff"),
-    url("binggrae-bold-webfont.ttf") format("truetype");
+  src: url("font/binggraebold.eot");
+  src: url("BinggraeBold.woff2") format("woff2"),
+    url("BinggraeBold.woff") format("woff"),
+    url("BinggraeBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
