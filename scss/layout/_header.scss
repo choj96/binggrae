@@ -46,7 +46,7 @@
               width: 14px;
               height: 14px;
               vertical-align: -2px;
-              background: url("../../images/layout/image_icon/link_arrow02.png");
+              background: url("../images/layout/image_icon/link_arrow02.png");
               margin-left: 5px;
             }
           }
@@ -69,7 +69,7 @@
         width: 144px;
         height: 35px;
         font-size: 0;
-        background: url("../../images/layout/header/logo-pc.png");
+        background: url("../images/layout/header/logo-pc.png");
       }
       @at-root .header-nav {
         position: absolute;
@@ -224,7 +224,7 @@
               width: 10px;
               height: 5px;
               vertical-align: 2px;
-              background: url("../../images/layout/image_icon/lang_btn.png");
+              background: url("../images/layout/image_icon/lang_btn.png");
               margin-left: 10px;
             }
           }
@@ -280,11 +280,12 @@
 }
 .header-hover {
   height: 573px;
-  background: pink;
+  background: #fff;
   border-radius: 0px 0px 50px 50px;
 }
 .header-ham-on {
   height: 100%;
-  background: url("../../images/layout/header/pc_ham_bg.png") no-repeat;
+  background: url("../images/layout/header/pc_ham_bg.png") no-repeat;
+  background: #fff;
   background-position: 100% -80px;
 }

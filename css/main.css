@@ -3,8 +3,7 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -118,7 +117,7 @@ body {
   width: 14px;
   height: 14px;
   vertical-align: -2px;
-  background: url("../../images/layout/image_icon/link_arrow02.png");
+  background: url("../images/layout/image_icon/link_arrow02.png");
   margin-left: 5px;
 }
 
@@ -139,7 +138,7 @@ body {
   width: 144px;
   height: 35px;
   font-size: 0;
-  background: url("../../images/layout/header/logo-pc.png");
+  background: url("../images/layout/header/logo-pc.png");
 }
 
 .header-nav {
@@ -292,7 +291,7 @@ body {
   width: 10px;
   height: 5px;
   vertical-align: 2px;
-  background: url("../../images/layout/image_icon/lang_btn.png");
+  background: url("../images/layout/image_icon/lang_btn.png");
   margin-left: 10px;
 }
 .header-lang > .lang-list {
@@ -345,20 +344,21 @@ body {
 
 .header-hover {
   height: 573px;
-  background: pink;
+  background: #fff;
   border-radius: 0px 0px 50px 50px;
 }
 
 .header-ham-on {
   height: 100%;
-  background: url("../../images/layout/header/pc_ham_bg.png") no-repeat;
+  background: url("../images/layout/header/pc_ham_bg.png") no-repeat;
+  background: #fff;
   background-position: 100% -80px;
 }
 
 .visual {
   padding: 180px 0;
   text-align: center;
-  background: url(../../images/layout/section_visual/pc_section01_3.jpg) no-repeat center/cover;
+  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat center/cover;
 }
 .visual .inner {
   display: block;
@@ -388,7 +388,7 @@ body {
   font-size: 17px;
   letter-spacing: -0.85px;
   text-align: left;
-  background: url(../../images/layout/image_icon/search_icon.png) no-repeat center left;
+  background: url(../images/layout/image_icon/search_icon.png) no-repeat center left;
   border: 0;
   outline: none;
 }
@@ -458,7 +458,7 @@ body {
   background-size: contain;
   border-radius: 30px;
   padding: 50px 40px;
-  background: url(../../images/layout/section_cs/sec04_backimg01.png);
+  background: url(../images/layout/section_cs/sec04_backimg01.png);
   cursor: pointer;
 }
 .email-box h4 {
@@ -493,7 +493,7 @@ body {
   background-size: contain;
   border-radius: 30px;
   padding: 50px 40px;
-  background: url(../../images/layout/section_cs/sec04_backimg02.png);
+  background: url(../images/layout/section_cs/sec04_backimg02.png);
 }
 .tel-box h4 {
   font-family: "binggraebold";
@@ -555,7 +555,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n + 1) {
+.qna-list li:nth-child(2n+1) {
   float: left;
 }
 .qna-list li a {
