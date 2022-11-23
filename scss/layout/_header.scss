@@ -1,0 +1,108 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: pink;
+  @at-root .header-top {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    .inner {
+      width: 1760px;
+      height: 31px;
+      @at-root .header-link {
+        float: right;
+        > li {
+          position: relative;
+          display: block;
+          float: left;
+          padding: 0 9px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 11px;
+            width: 2px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          &:first-child::before {
+            content: none;
+          }
+          > a {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 30px;
+            &::after {
+              content: "";
+              position: relative;
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              vertical-align: -2px;
+              background: url("../../images/layout/image_icon/link_arrow02.png");
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @at-root .header-main {
+    width: 100%;
+    // border-bottom: 1px solid #e7e7e7;
+    .inner {
+      width: 1760px;
+      height: 116px;
+      @at-root .header-logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 144px;
+        height: 35px;
+        font-size: 0;
+        background: url("../../images/layout/header/logo-pc.png");
+      }
+      @at-root .header-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        .header-gnb {
+          display: flex;
+          > li {
+            height: 115px;
+            padding: 49px 80px 47px 0px;
+            > a {
+              font-size: 20px;
+              line-height: 1;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      @at-root .header-main-right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @at-root .header-lang {
+          display: inline-block;
+        }
+        @at-root .header-hamburger {
+          display: inline-block;
+          width: 26px;
+          height: 22px;
+          border: 0;
+          background: url("../../images/layout/image_icon/m_ham_menu_btn.png");
+        }
+      }
+    }
+  }
+}
