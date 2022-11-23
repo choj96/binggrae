@@ -1,0 +1,131 @@
+.cs {
+  .inner {
+    position: relative;
+    display: block;
+    width: 1310px;
+    padding-top: 30px;
+    // padding-top 임시로 넣은 높이값
+    h3 {
+      font-family: "binggraebold";
+      font-size: 38px;
+      font-weight: 700;
+      text-align: center;
+      color: #1f1f1f;
+      margin-bottom: 40px;
+    }
+    .content-box {
+      display: block;
+      width: 100%;
+      padding: 90px 40px;
+      border-radius: 30px;
+      box-shadow: 0 5px 24px 3px rgba(0, 0, 0, 0.1);
+      .cs-advice {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @at-root .email-box {
+          @include adviceBox;
+          background: url(../../images/layout/section_cs/sec04_backimg01.png);
+          cursor: pointer;
+          h4 {
+            font-family: "binggraebold";
+            font-size: 32px;
+            font-weight: normal;
+            color: #1f1f1f;
+            margin-bottom: 30px;
+          }
+          p {
+            font-size: 16px;
+          }
+          a {
+            position: absolute;
+            bottom: 50px;
+            left: 40px;
+            display: block;
+            width: 160px;
+            text-align: center;
+            line-height: 43px;
+            background: #ed1c24;
+            border-radius: 21px;
+            color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          }
+        }
+        @at-root .tel-box {
+          @include adviceBox;
+          background: url(../../images/layout/section_cs/sec04_backimg02.png);
+          h4 {
+            font-family: "binggraebold";
+            font-size: 32px;
+            font-weight: normal;
+            color: #1f1f1f;
+            margin-bottom: 30px;
+          }
+          .tel {
+            font-size: 46.5px;
+            font-weight: 600;
+            letter-spacing: -0.07em;
+            color: #303030;
+          }
+          p {
+            padding-bottom: 25px;
+            color: #1f1f1f;
+            font-weight: bold;
+            span {
+              color: #e0462e;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      @at-root .qna {
+        position: relative;
+        p {
+          font-family: "binggraebold";
+          font-size: 23px;
+          font-weight: normal;
+          padding: 60px 0 30px;
+        }
+        .qna-more {
+          position: absolute;
+          top: 53px;
+          right: 0;
+          display: block;
+          width: 160px;
+          text-align: center;
+          line-height: 43px;
+          border-radius: 21px;
+          color: #1f1f1f;
+          font-size: 14px;
+          border: 1px solid rgba(224, 223, 226, 0.6);
+          &:hover {
+            border: none;
+            background-color: #ed1c24;
+            color: #fff;
+          }
+        }
+        @at-root .qna-list {
+          li {
+            width: calc(100% / 2 - 52px / 2);
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            border-radius: 30px;
+            cursor: pointer;
+            &:nth-child(2n) {
+              float: right;
+            }
+            &:nth-child(2n + 1) {
+              float: left;
+            }
+            a {
+              font-size: 18px;
+              line-height: 80px;
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
