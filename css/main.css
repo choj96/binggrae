@@ -67,10 +67,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  background: url("../../images/layout/header/pc_ham_bg.png") no-repeat;
-  background-position: 100% -80px;
-  border-radius: 0px 0px 50px 50px;
+  transition: height 0.5s;
   z-index: 9999;
 }
 .header-top {
@@ -151,7 +148,6 @@ body {
 .header-nav .header-gnb {
   position: relative;
   display: flex;
-  display: none;
 }
 .header-nav .header-gnb > li {
   position: relative;
@@ -167,6 +163,10 @@ body {
 }
 .header-nav .header-gnb > li:hover a::after {
   content: "";
+}
+.header-nav .header-gnb > li:hover .depth2 {
+  opacity: 1;
+  visibility: visible;
 }
 .header-nav .header-gnb > li > a {
   position: relative;
@@ -188,10 +188,14 @@ body {
 }
 .header-nav .header-gnb > li .depth2 {
   position: absolute;
+  display: block;
   left: 0;
   top: 118px;
-  display: block;
   padding: 17px 0 36px 0;
+  height: 0px;
+  opacity: 0;
+  visibility: none;
+  transition: opacity 0.5s;
 }
 .header-nav .header-gnb > li .depth2 > li > a {
   display: block;
@@ -211,6 +215,8 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, 50%);
+  opacity: 0;
+  visibility: hidden;
 }
 .hamburger-gnb {
   display: flex;
@@ -222,12 +228,41 @@ body {
   width: calc(16.6666666667% - 5px);
   border: 1px solid #ececed;
   border-radius: 30px;
-  padding: 50px 30px;
+  padding: 50px 30px 20px 30px;
+}
+.hamburger-gnb > li:hover > a {
+  color: #e0462e;
 }
 .hamburger-gnb > li > a {
   font-family: "Binggrae";
   font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.5s;
 }
+.hamburger-gnb > li > .depth2 {
+  margin-top: 30px;
+}
+.hamburger-gnb > li > .depth2 > li > a {
+  padding: 10px 0;
+  font-size: 18px;
+  white-space: nowrap;
+  transition: color 0.5s;
+}
+.hamburger-gnb > li > .depth2 > li > a:hover {
+  color: #e0462e;
+}
+.hamburger-gnb > li > .depth2 > li > .depth3 {
+  padding: 8px 0;
+}
+.hamburger-gnb > li > .depth2 > li > .depth3 > li > a {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #343434;
+}
+
 .header-main-right {
   position: absolute;
   right: 0;
@@ -235,6 +270,10 @@ body {
   transform: translateY(-50%);
 }
 .header-lang {
+  position: relative;
+  float: left;
+}
+.header-lang > .lang-button {
   display: block;
   padding: 3px 0;
   border: 0;
@@ -242,9 +281,8 @@ body {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  float: left;
 }
-.header-lang::after {
+.header-lang > .lang-button::after {
   content: "";
   position: relative;
   display: inline-block;
@@ -254,24 +292,28 @@ body {
   background: url("../../images/layout/image_icon/lang_btn.png");
   margin-left: 10px;
 }
-
-.header-main-right > .lang-list {
+.header-lang > .lang-list {
   position: absolute;
   left: 0;
   top: 30px;
   background: #fff;
   border-radius: 18px;
   padding: 9px 0;
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
+  transform: scaleY(0);
+  transition: transform 0.5s;
 }
-.header-main-right > .lang-list > li {
+.header-lang > .lang-list > li {
   text-align: center;
 }
-.header-main-right > .lang-list > li > a {
+.header-lang > .lang-list > li > a {
   padding: 9px 16px;
   font-size: 16px;
   font-weight: 700;
+  white-space: nowrap;
   cursor: pointer;
 }
+
 .header-hamburger {
   display: block;
   width: 26px;
@@ -291,4 +333,21 @@ body {
 }
 .header-hamburger > span:first-child {
   margin-top: 0;
+}
+
+.header-normal {
+  height: 147px;
+  background: transparent;
+}
+
+.header-hover {
+  height: 573px;
+  background: pink;
+  border-radius: 0px 0px 50px 50px;
+}
+
+.header-ham-on {
+  height: 100%;
+  background: url("../../images/layout/header/pc_ham_bg.png") no-repeat;
+  background-position: 100% -80px;
 }
