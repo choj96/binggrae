@@ -19,6 +19,10 @@ btn_hamburger.addEventListener("click", () => {
     btn_hamburger.classList.add("hamburger-toggle");
     header_main.style.borderBottom = "none";
     hamburgerToggle = true;
+    header_bg.classList.remove("header-bg-open");
+    for (i = 0; i < header_depth.length; i++) {
+      header_depth[i].classList.remove("depth2-on");
+    }
   } else if (hamburgerToggle === true) {
     window.scrollTo(0, 0);
     hamburger_menu.classList.remove("on");
