@@ -7,9 +7,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .f-logo {
-      }
-      .f-top-right {
+      @at-root .f-top-right {
         > a {
           font-size: 14px;
           color: rgba(255, 255, 255, 0.3);
@@ -37,7 +35,7 @@
         color: rgba(255, 255, 255, 0.3);
         letter-spacing: -0.8px;
       }
-      .f-bottom-right {
+      @at-root .f-bottom-right {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,22 +50,23 @@
               align-items: center;
               width: 70px;
               height: 70px;
+              margin: 0 10px;
               background: #1b1b1b;
-              box-shadow: 4px 8px 1px rgb(0 0 0 / 3.6),
-                inset 0px 4px 10px 2px rgb(73 73 73 / 0.3);
+              box-shadow: 4px 8px 1px rgb(0 0 0 / 0.2),
+                inset 0px 4px 10px 2px rgb(73 73 73 / 0.2);
               border-radius: 50%;
             }
           }
         }
       }
-      .flagship {
+      @at-root .flagship {
         position: relative;
         display: block;
         width: 355px;
         line-height: 70px;
         background: #1b1b1b;
-        box-shadow: 4px 8px 1px rgb(0 0 0 / 3.6),
-          inset 0px 4px 10px 2px rgb(73 73 73 / 0.3);
+        box-shadow: 4px 8px 1px rgb(0 0 0 / 0.2),
+          inset 0px 4px 10px 2px rgb(73 73 73 / 0.2);
         border-radius: 30px;
         margin-left: 60px;
         padding: 0 18px;
