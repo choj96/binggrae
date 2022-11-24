@@ -63,7 +63,6 @@ body {
   width: 100%;
 }
 
-
 .top-button {
   position: fixed;
   right: 30px;
@@ -471,6 +470,129 @@ body {
   border: 1px solid #edecef;
   cursor: pointer;
 }
+.product {
+  margin-top: 120px;
+}
+.product .inner {
+  max-width: 1650px;
+}
+.product .inner .h-binggrae {
+  font-family: "binggraebold";
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+}
+.product .inner .product-top {
+  padding: 20px 0;
+  max-width: 1650px;
+  width: 100%;
+  margin: 0 auto 140px;
+}
+.product .inner .product-top .top-bt .prev-bt {
+  display: block;
+  width: 7px;
+  height: 15px;
+  left: 0;
+  border: 0;
+  opacity: 0.1;
+  background: url("../images/layout/image_icon/prev_arrow.png") no-repeat;
+  cursor: pointer;
+}
+.product .inner .product-top .top-bt .next-bt {
+  display: block;
+  width: 8px;
+  height: 15px;
+  right: 0;
+  border: 0;
+  background: url("../images/layout/image_icon/next_arrow.png") no-repeat;
+  cursor: pointer;
+}
+.product .inner .product-top .pt-slide .slide-t {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.product .inner .pt-txt {
+  margin-top: 12px;
+}
+.product .inner .pt-txt .txt-box .txt-name {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.product .inner .pt-txt .txt-box .txt-name > li {
+  width: 251px;
+  height: 43px;
+  border-radius: 21px;
+  color: #1f1f1f;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+.product .inner .pt-txt .txt-box .txt-name > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 43px;
+}
+.product .h-brand {
+  font-family: "binggraebold";
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.product .product-bottom {
+  max-width: 1650px;
+  width: 100%;
+}
+.product .product-bottom .bt-bt .b-prev-bt {
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 15px;
+  left: 0;
+  border: 0;
+  opacity: 0.1;
+  background: url("../images/layout/image_icon/prev_arrow.png") no-repeat;
+  cursor: pointer;
+}
+.product .product-bottom .bt-bt .b-next-bt {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  right: 0;
+  border: 0;
+  background: url("../images/layout/image_icon/next_arrow.png") no-repeat;
+  cursor: pointer;
+}
+.product .product-bottom .pb-slide {
+  padding: 20px 0;
+}
+.product .product-bottom .pb-slide .slide-b {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.product .product-bottom .pb-slide .slide-b > li {
+  width: 251px;
+  height: 251px;
+}
+.product .product-bottom .pb-slide .slide-b > li > a {
+  border: solid 1px #edecef;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 251px;
+}
+
 .cs .inner {
   position: relative;
   display: block;
@@ -795,10 +917,8 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
 }
-
 .flagship span::after {
-  content: url(../../images/layout/image_icon/select_btn01.png);
-
+  content: url("../images/layout/image_icon/select_btn01.png");
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
