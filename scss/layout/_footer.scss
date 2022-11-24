@@ -77,7 +77,7 @@
           font-weight: 500;
           color: rgba(255, 255, 255, 0.3);
           &::after {
-            content: url(../images/layout/image_icon/select_btn01.png);
+            content: url("../images/layout/image_icon/select_btn01.png");
             position: absolute;
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);

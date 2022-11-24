@@ -2,7 +2,8 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -339,7 +340,7 @@ body {
   display: inline;
   width: 13px;
   height: 13px;
-  background: url("../../images/layout/image_icon/link_arrow01.png") no-repeat;
+  background: url("../images/layout/image_icon/link_arrow01.png") no-repeat;
   float: right;
 }
 .hamburger-gnb > li > .depth2 > li > .depth3 {
@@ -579,7 +580,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n+1) {
+.qna-list li:nth-child(2n + 1) {
   float: left;
 }
 .qna-list li a {
@@ -760,7 +761,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 .footer .inner .f-bottom .flagship span::after {
-  content: url(../images/layout/image_icon/select_btn01.png);
+  content: url("../images/layout/image_icon/select_btn01.png");
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
