@@ -18,21 +18,24 @@ btn_hamburger.addEventListener("click", () => {
     header_nav.classList.add("off");
     btn_hamburger.classList.add("hamburger-toggle");
     header_main.style.borderBottom = "none";
-    hamburgerToggle = true;
     header_bg.classList.remove("header-bg-open");
     for (i = 0; i < header_depth.length; i++) {
       header_depth[i].classList.remove("depth2-on");
     }
+    disableScroll();
+    hamburgerToggle = true;
   } else if (hamburgerToggle === true) {
     window.scrollTo(0, 0);
     hamburger_menu.classList.remove("on");
     header_nav.classList.remove("off");
     btn_hamburger.classList.remove("hamburger-toggle");
     header_main.style.borderBottom = "1px solid #e7e7e7";
+    enableScroll();
     hamburgerToggle = false;
   }
 });
 
+// 언어 토글
 let langToggle = false;
 btn_lang.addEventListener("click", () => {
   if (langToggle === false) {
@@ -53,6 +56,8 @@ function headerColor() {
     header.style.background = "transparent";
   }
 }
+
+// 헤더 네비게이션 온오프
 header_gnb.addEventListener("mouseover", () => {
   header_bg.classList.add("header-bg-open");
   for (i = 0; i < header_depth.length; i++) {
@@ -67,3 +72,11 @@ header.addEventListener("mouseout", () => {
     }
   });
 });
+
+// 스크롤 활성 비활성화
+function disableScroll() {
+  document.body.style.overflow = "hidden";
+}
+function enableScroll() {
+  document.body.style.overflow = "visible";
+}
