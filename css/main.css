@@ -2,7 +2,8 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -86,7 +87,8 @@ body {
 }
 .top-button .shop-btn {
   background: #fff;
-  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
+    inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
@@ -445,7 +447,8 @@ body {
 .visual {
   padding: 180px 0;
   text-align: center;
-  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat center/cover;
+  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat
+    center/cover;
 }
 .visual .inner {
   display: block;
@@ -475,7 +478,8 @@ body {
   font-size: 17px;
   letter-spacing: -0.85px;
   text-align: left;
-  background: url(../images/layout/image_icon/search_icon.png) no-repeat center left;
+  background: url(../images/layout/image_icon/search_icon.png) no-repeat center
+    left;
   border: 0;
   outline: none;
 }
@@ -513,7 +517,8 @@ body {
 .cs .inner {
   position: relative;
   display: block;
-  width: 1310px;
+  width: 100%;
+  max-width: 1310px;
   margin: 0 auto;
   padding-top: 30px;
 }
@@ -535,18 +540,17 @@ body {
 .cs .inner .content-box .cs-advice {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .email-box {
-  width: 590px;
-  height: 324px;
-  background-position: center right;
+  width: 48%;
+  height: 323px;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 30px;
   padding: 50px 40px;
   position: relative;
-  background: url(../images/layout/section_cs/sec04_backimg01.png);
+  background: url(../images/layout/section_cs/sec04_backimg01_1.png);
   cursor: pointer;
 }
 .email-box h4 {
@@ -575,9 +579,9 @@ body {
 }
 
 .tel-box {
-  width: 590px;
-  height: 324px;
-  background-position: center right;
+  width: 48%;
+  height: 323px;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 30px;
@@ -650,7 +654,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n+1) {
+.qna-list li:nth-child(2n + 1) {
   float: left;
 }
 .qna-list li:hover a {
@@ -675,10 +679,37 @@ body {
   transition: all 0.5s ease;
 }
 
+@media screen and (max-width: 1400px) {
+  .inner {
+    width: 95% !important;
+  }
+  .qna-list > li > a {
+    line-height: 65px;
+  }
+  .qna-icon {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .qna-icon > img {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .qna-list > li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .email-box .tel-box {
+    padding: 30px !important;
+    height: 90% !important;
+  }
+}
 .report .inner {
   position: relative;
   display: block;
-  width: 1310px;
+  width: 100%;
+  max-width: 1310px;
   margin: 0 auto;
 }
 .report .inner h3 {
@@ -811,7 +842,8 @@ body {
   height: 70px;
   margin: 0 10px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 50%;
 }
 
@@ -821,7 +853,8 @@ body {
   width: 355px;
   line-height: 70px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 30px;
   margin-left: 60px;
   padding: 0 18px;
