@@ -2,7 +2,8 @@
   .inner {
     position: relative;
     display: block;
-    width: 1310px;
+    width: 100%;
+    max-width: 1310px;
     margin: 0 auto;
     padding-top: 30px;
     // padding-top 임시로 넣은 높이값
@@ -23,11 +24,10 @@
       .cs-advice {
         display: flex;
         justify-content: space-between;
-        width: 100%;
         @at-root .email-box {
           @include adviceBox;
           position: relative;
-          background: url(../images/layout/section_cs/sec04_backimg01.png);
+          background: url(../images/layout/section_cs/sec04_backimg01_1.png);
           cursor: pointer;
           h4 {
             font-family: "binggraebold";
@@ -144,5 +144,31 @@
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .inner {
+    width: 95% !important;
+  }
+  .qna-list > li > a {
+    line-height: 65px;
+  }
+  .qna-icon {
+    width: 35px !important;
+    height: 35px !important;
+    > img {
+      width: 30%;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .qna-list > li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .email-box .tel-box {
+    padding: 30px !important;
+    height: 90% !important;
   }
 }
