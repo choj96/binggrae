@@ -85,8 +85,7 @@
           display: flex;
           > li {
             position: relative;
-            padding: 48px 0px;
-            margin-right: 80px;
+            padding: 48px 80px 0px 0px;
             &:hover {
               > a {
                 color: $binggrae-red;
@@ -129,11 +128,12 @@
               transition: opacity 2.5s;
               > li {
                 > a {
+                  position: relative;
                   display: block;
-                  padding: 7px 0;
+                  padding: 7px 80px 7px 0;
                   font-size: 18px;
                   line-height: 1.5;
-                  letter-spacing: 0.2px;
+                  letter-spacing: 0px;
                   white-space: nowrap;
                   transition: color 0.5s;
                   &:hover {
