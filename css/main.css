@@ -2,7 +2,8 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -86,7 +87,8 @@ body {
 }
 .top-button .shop-btn {
   background: #fff;
-  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
+    inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
@@ -96,7 +98,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 147px;
+  height: 148px;
   z-index: 9999;
 }
 .header-top {
@@ -341,7 +343,7 @@ body {
   color: #e0462e;
 }
 .hamburger-gnb > li > a {
-  font-family: "Binggrae";
+  font-family: "binggraebold";
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
@@ -367,7 +369,7 @@ body {
   display: inline;
   width: 13px;
   height: 13px;
-  background: url("../../images/layout/image_icon/link_arrow01.png") no-repeat;
+  background: url("../images/layout/image_icon/link_arrow01.png") no-repeat;
   float: right;
 }
 .hamburger-gnb > li > .depth2 > li > .depth3 {
@@ -405,7 +407,8 @@ body {
 .visual {
   padding: 180px 0;
   text-align: center;
-  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat center/cover;
+  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat
+    center/cover;
 }
 .visual .inner {
   display: block;
@@ -435,7 +438,8 @@ body {
   font-size: 17px;
   letter-spacing: -0.85px;
   text-align: left;
-  background: url(../images/layout/image_icon/search_icon.png) no-repeat center left;
+  background: url(../images/layout/image_icon/search_icon.png) no-repeat center
+    left;
   border: 0;
   outline: none;
 }
@@ -610,7 +614,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n+1) {
+.qna-list li:nth-child(2n + 1) {
   float: left;
 }
 .qna-list li:hover a {
@@ -798,7 +802,8 @@ body {
   height: 70px;
   margin: 0 10px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 50%;
 }
 
@@ -808,7 +813,8 @@ body {
   width: 355px;
   line-height: 70px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 30px;
   margin-left: 60px;
   padding: 0 18px;
@@ -821,8 +827,10 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
 }
+
 .flagship span::after {
   content: url(../../images/layout/image_icon/select_btn01.png);
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
