@@ -27,7 +27,8 @@
         @at-root .email-box {
           @include adviceBox;
           position: relative;
-          background: url(../images/layout/section_cs/sec04_backimg01_1.png);
+          background: #eef8fb
+            url(../images/layout/section_cs/sec04_backimg01_1.png);
           cursor: pointer;
           h4 {
             font-family: "binggraebold";
@@ -48,7 +49,8 @@
         }
         @at-root .tel-box {
           @include adviceBox;
-          background: url(../images/layout/section_cs/sec04_backimg02.png);
+          background: #fdf3f2
+            url(../images/layout/section_cs/sec04_backimg02.png);
           h4 {
             font-family: "binggraebold";
             font-size: 32px;
@@ -75,7 +77,7 @@
       }
       @at-root .qna {
         position: relative;
-        p {
+        h4 {
           font-family: "binggraebold";
           font-size: 23px;
           font-weight: normal;
@@ -162,13 +164,72 @@
   }
 }
 @media screen and (max-width: 1280px) {
+  .inner > h3 {
+    font-size: 30px !important;
+  }
   .qna-list > li {
     width: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
-  .email-box .tel-box {
+  .content-box > div > h4,
+  .content-box > div > div > h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .email-box,
+  .tel-box {
+    height: 260px !important;
     padding: 30px !important;
-    height: 90% !important;
+    > p {
+      font-size: 14px;
+    }
+    .tel {
+      font-size: 38px;
+    }
+    .viewButton {
+      bottom: 30px;
+      left: 30px;
+    }
+  }
+}
+@media screen and (max-width: 840px) {
+  .content-box > div > h4,
+  .content-box > div > div > h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .inner > h3 {
+    font-size: 22px !important;
+  }
+  .content-box > div > h4,
+  .content-box > div > div > h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .cs-advice {
+    flex-direction: column !important;
+  }
+  .email-box,
+  .tel-box {
+    width: 100% !important;
+    height: 150px !important;
+    padding: 29px 23px;
+    margin-bottom: 10px;
+    > .viewButton {
+      display: none;
+    }
+    p {
+      font-size: 12px;
+      padding-bottom: 0;
+    }
+  }
+  .qna-list {
+    a {
+      font-size: 14px !important;
+      line-height: 55px !important;
+    }
   }
 }

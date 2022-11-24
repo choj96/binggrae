@@ -2,8 +2,7 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-break: break-all;
 }
 
 ul,
@@ -87,8 +87,7 @@ body {
 }
 .top-button .shop-btn {
   background: #fff;
-  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
-    inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
@@ -407,8 +406,7 @@ body {
 .visual {
   padding: 180px 0;
   text-align: center;
-  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat
-    center/cover;
+  background: url(../images/layout/section_visual/pc_section01_3.jpg) no-repeat center/cover;
 }
 .visual .inner {
   display: block;
@@ -438,8 +436,7 @@ body {
   font-size: 17px;
   letter-spacing: -0.85px;
   text-align: left;
-  background: url(../images/layout/image_icon/search_icon.png) no-repeat center
-    left;
+  background: url(../images/layout/image_icon/search_icon.png) no-repeat center left;
   border: 0;
   outline: none;
 }
@@ -504,13 +501,13 @@ body {
 .email-box {
   width: 48%;
   height: 323px;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   border-radius: 30px;
   padding: 50px 40px;
   position: relative;
-  background: url(../images/layout/section_cs/sec04_backimg01_1.png);
+  background: #eef8fb url(../images/layout/section_cs/sec04_backimg01_1.png);
   cursor: pointer;
 }
 .email-box h4 {
@@ -541,12 +538,12 @@ body {
 .tel-box {
   width: 48%;
   height: 323px;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   border-radius: 30px;
   padding: 50px 40px;
-  background: url(../images/layout/section_cs/sec04_backimg02.png);
+  background: #fdf3f2 url(../images/layout/section_cs/sec04_backimg02.png);
 }
 .tel-box h4 {
   font-family: "binggraebold";
@@ -574,7 +571,7 @@ body {
 .qna {
   position: relative;
 }
-.qna p {
+.qna h4 {
   font-family: "binggraebold";
   font-size: 23px;
   font-weight: normal;
@@ -614,7 +611,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n + 1) {
+.qna-list li:nth-child(2n+1) {
   float: left;
 }
 .qna-list li:hover a {
@@ -655,14 +652,76 @@ body {
   }
 }
 @media screen and (max-width: 1280px) {
+  .inner > h3 {
+    font-size: 30px !important;
+  }
   .qna-list > li {
     width: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
-  .email-box .tel-box {
+  .content-box > div > h4,
+.content-box > div > div > h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .email-box,
+.tel-box {
+    height: 260px !important;
     padding: 30px !important;
-    height: 90% !important;
+  }
+  .email-box > p,
+.tel-box > p {
+    font-size: 14px;
+  }
+  .email-box .tel,
+.tel-box .tel {
+    font-size: 38px;
+  }
+  .email-box .viewButton,
+.tel-box .viewButton {
+    bottom: 30px;
+    left: 30px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .content-box > div > h4,
+.content-box > div > div > h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .inner > h3 {
+    font-size: 22px !important;
+  }
+  .content-box > div > h4,
+.content-box > div > div > h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .cs-advice {
+    flex-direction: column !important;
+  }
+  .email-box,
+.tel-box {
+    width: 100% !important;
+    height: 150px !important;
+    padding: 29px 23px;
+    margin-bottom: 10px;
+  }
+  .email-box > .viewButton,
+.tel-box > .viewButton {
+    display: none;
+  }
+  .email-box p,
+.tel-box p {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .qna-list a {
+    font-size: 14px !important;
+    line-height: 55px !important;
   }
 }
 .report .inner {
@@ -682,11 +741,12 @@ body {
 .report .inner .report-list {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-bottom: 140px;
 }
 .cyber {
   position: relative;
-  width: 630px;
+  width: 48%;
   height: 230px;
   background: #f9f9f9;
   border-radius: 30px;
@@ -716,7 +776,7 @@ body {
 
 .safe {
   position: relative;
-  width: 630px;
+  width: 48%;
   height: 230px;
   background: #f9f9f9;
   border-radius: 30px;
@@ -744,6 +804,19 @@ body {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1400px) {
+  p {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 16px !important;
+  }
+}
+.footer {
+  background: #1b1b1b;
+}
 .footer .inner {
   width: 100%;
   background: #1b1b1b;
@@ -802,8 +875,7 @@ body {
   height: 70px;
   margin: 0 10px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
-    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 50%;
 }
 
@@ -813,8 +885,7 @@ body {
   width: 355px;
   line-height: 70px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2),
-    inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
+  box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 30px;
   margin-left: 60px;
   padding: 0 18px;
@@ -827,10 +898,8 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
 }
-
 .flagship span::after {
-  content: url(../../images/layout/image_icon/select_btn01.png);
-
+  content: url("../images/layout/image_icon/select_btn01.png");
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
