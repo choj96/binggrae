@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
@@ -447,6 +446,7 @@ body {
   position: relative;
   display: block;
   width: 1310px;
+  margin: 0 auto;
   padding-top: 30px;
 }
 .cs .inner h3 {
@@ -465,7 +465,6 @@ body {
   box-shadow: 0 5px 24px 3px rgba(0, 0, 0, 0.1);
 }
 .cs .inner .content-box .cs-advice {
-  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -478,6 +477,7 @@ body {
   background-size: contain;
   border-radius: 30px;
   padding: 50px 40px;
+  position: relative;
   background: url(../images/layout/section_cs/sec04_backimg01.png);
   cursor: pointer;
 }
@@ -491,10 +491,8 @@ body {
 .email-box p {
   font-size: 16px;
 }
-.email-box a {
+.email-box .viewButton {
   position: absolute;
-  bottom: 50px;
-  left: 40px;
   display: block;
   width: 160px;
   text-align: center;
@@ -503,6 +501,8 @@ body {
   border-radius: 21px;
   color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 40px;
 }
 
 .tel-box {
@@ -566,10 +566,14 @@ body {
   color: #fff;
 }
 .qna-list li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: calc(50% - 26px);
   margin-bottom: 10px;
   background: #f9f9f9;
   border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
   cursor: pointer;
 }
 .qna-list li:nth-child(2n) {
@@ -582,4 +586,183 @@ body {
   font-size: 18px;
   line-height: 80px;
   margin-left: 18px;
+}
+.qna-list li .qna-icon {
+  position: absolute;
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+  right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  background-color: #ed1c24;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.qna-list li .qna-icon:hover {
+  display: block;
+  transform: scale(0);
+}
+
+.report .inner {
+  position: relative;
+  display: block;
+  width: 1310px;
+  margin: 0 auto;
+}
+.report .inner h3 {
+  font-family: "binggraebold";
+  font-size: 38px;
+  color: #1f1f1f;
+  padding: 140px 0 45px;
+  text-align: center;
+}
+.report .inner .report-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+.report .inner .report-list .cyber {
+  position: relative;
+  width: 630px;
+  height: 230px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
+  cursor: pointer;
+  padding-top: 80px;
+}
+.report .inner .report-list .cyber > p {
+  font-size: 20px;
+  text-align: center;
+}
+.viewButton {
+  position: absolute;
+  display: block;
+  width: 160px;
+  text-align: center;
+  line-height: 43px;
+  background: #ed1c24;
+  border-radius: 21px;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.report .inner .report-list .safe {
+  position: relative;
+  width: 630px;
+  height: 230px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgba(121, 121, 121, 0.1);
+  cursor: pointer;
+  padding-top: 80px;
+}
+.report .inner .report-list .safe > p {
+  font-size: 20px;
+  text-align: center;
+}
+.viewButton {
+  position: absolute;
+  display: block;
+  width: 160px;
+  text-align: center;
+  line-height: 43px;
+  background: #ed1c24;
+  border-radius: 21px;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.footer .inner {
+  width: 100%;
+  background: #1b1b1b;
+  padding: 27px 45px;
+}
+.footer .inner .f-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .inner .f-top .f-top-right > a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-right: 30px;
+}
+.footer .inner .f-top .f-top-right > a:last-child {
+  margin-right: 0;
+}
+.footer .inner .f-main {
+  padding: 30px 0 130px;
+}
+.footer .inner .f-main p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+.footer .inner .f-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .inner .f-bottom .copy {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: -0.8px;
+}
+.footer .inner .f-bottom .f-bottom-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .inner .f-bottom .f-bottom-right .sns .sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .inner .f-bottom .f-bottom-right .sns .sns-list > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: #1b1b1b;
+  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.3);
+  border-radius: 50%;
+}
+.footer .inner .f-bottom .flagship {
+  position: relative;
+  display: block;
+  width: 355px;
+  line-height: 70px;
+  background: #1b1b1b;
+  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.3);
+  border-radius: 30px;
+  margin-left: 60px;
+  padding: 0 18px;
+}
+.footer .inner .f-bottom .flagship .flagship-btn {
+  margin-right: 18px;
+}
+.footer .inner .f-bottom .flagship span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer .inner .f-bottom .flagship span::after {
+  content: url(../../images/layout/image_icon/select_btn01.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  right: 20px;
 }

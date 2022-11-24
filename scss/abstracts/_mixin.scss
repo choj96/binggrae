@@ -7,3 +7,23 @@
   border-radius: 30px;
   padding: 50px 40px;
 }
+@mixin reportBox {
+  width: 630px;
+  height: 230px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  box-shadow: inset 0px 5px 10px rgb(121, 121, 121, 0.1);
+  cursor: pointer;
+  padding-top: 80px;
+}
+@mixin viewButton {
+  position: absolute;
+  display: block;
+  width: 160px;
+  text-align: center;
+  line-height: 43px;
+  background: #ed1c24;
+  border-radius: 21px;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
