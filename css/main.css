@@ -63,7 +63,7 @@ body {
   width: 100%;
 }
 
-<<<<<<< HEAD
+
 .top-button {
   position: fixed;
   right: 30px;
@@ -92,13 +92,12 @@ body {
   letter-spacing: 0.5px;
 }
 
-=======
 .header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 147px;
+  height: 148px;
   z-index: 9999;
 }
 .header-top {
@@ -343,7 +342,7 @@ body {
   color: #e0462e;
 }
 .hamburger-gnb > li > a {
-  font-family: "Binggrae";
+  font-family: "binggraebold";
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
@@ -369,7 +368,7 @@ body {
   display: inline;
   width: 13px;
   height: 13px;
-  background: url("../../images/layout/image_icon/link_arrow01.png") no-repeat;
+  background: url("../images/layout/image_icon/link_arrow01.png") no-repeat;
   float: right;
 }
 .hamburger-gnb > li > .depth2 > li > .depth3 {
@@ -472,7 +471,6 @@ body {
   border: 1px solid #edecef;
   cursor: pointer;
 }
->>>>>>> f8294634da73d7c4a51662f431a3b6c4178f5ff9
 .cs .inner {
   position: relative;
   display: block;
@@ -797,8 +795,10 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
 }
+
 .flagship span::after {
   content: url(../../images/layout/image_icon/select_btn01.png);
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
