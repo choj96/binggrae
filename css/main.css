@@ -814,6 +814,16 @@ body {
     font-size: 16px !important;
   }
 }
+@media screen and (max-width: 770px) {
+  .report-list {
+    flex-direction: column;
+  }
+  .report-list > .cyber,
+.report-list .safe {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+}
 .footer {
   background: #1b1b1b;
 }

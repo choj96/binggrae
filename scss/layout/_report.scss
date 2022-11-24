@@ -61,5 +61,12 @@
   }
 }
 @media screen and (max-width: 770px) {
-
+  .report-list {
+    flex-direction: column;
+    > .cyber,
+    .safe {
+      width: 100% !important;
+      margin-bottom: 10px !important;
+    }
+  }
 }
