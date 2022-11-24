@@ -27,7 +27,7 @@
         @at-root .email-box {
           @include adviceBox;
           position: relative;
-          background: url(../../images/layout/section_cs/sec04_backimg01.png);
+          background: url(../images/layout/section_cs/sec04_backimg01.png);
           cursor: pointer;
           h4 {
             font-family: "binggraebold";
@@ -48,7 +48,7 @@
         }
         @at-root .tel-box {
           @include adviceBox;
-          background: url(../../images/layout/section_cs/sec04_backimg02.png);
+          background: url(../images/layout/section_cs/sec04_backimg02.png);
           h4 {
             font-family: "binggraebold";
             font-size: 32px;
