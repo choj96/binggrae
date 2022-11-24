@@ -43,6 +43,7 @@
             @include viewButton;
             bottom: 50px;
             left: 40px;
+            transform: translateX(0);
           }
         }
         @at-root .tel-box {
@@ -103,8 +104,10 @@
             position: relative;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: calc(100% / 2 - 52px / 2);
             margin-bottom: 10px;
+            padding: 0 18px;
             background: #f9f9f9;
             border-radius: 30px;
             box-shadow: inset 0px 5px 10px rgb(121, 121, 121, 0.1);
@@ -115,16 +118,18 @@
             &:nth-child(2n + 1) {
               float: left;
             }
+            &:hover a {
+              font-weight: 700;
+            }
+            &:hover .qna-icon {
+              transform: scale(1);
+            }
             a {
               font-size: 18px;
               line-height: 80px;
-              margin-left: 18px;
+              // margin-left: 18px;
             }
             .qna-icon {
-              position: absolute;
-              top: 50%;
-              transform: scale(1) translateY(-50%);
-              right: 18px;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -132,11 +137,8 @@
               height: 47px;
               background-color: #ed1c24;
               border-radius: 50%;
+              transform: scale(0);
               transition: all 0.5s ease;
-              &:hover {
-                display: block;
-                transform: scale(0);
-              }
             }
           }
         }

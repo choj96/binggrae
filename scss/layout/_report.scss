@@ -15,7 +15,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 140px;
-      .cyber {
+      @at-root .cyber {
         position: relative;
         @include reportBox;
         > p {
@@ -30,7 +30,7 @@
           font-size: 14px;
         }
       }
-      .safe {
+      @at-root .safe {
         position: relative;
         @include reportBox;
         > p {
