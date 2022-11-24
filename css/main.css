@@ -68,7 +68,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 147px;
+  height: 148px;
   z-index: 9999;
 }
 .header-top {
@@ -313,7 +313,7 @@ body {
   color: #e0462e;
 }
 .hamburger-gnb > li > a {
-  font-family: "Binggrae";
+  font-family: "binggraebold";
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
@@ -760,7 +760,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 .footer .inner .f-bottom .flagship span::after {
-  content: url(../../images/layout/image_icon/select_btn01.png);
+  content: url(../images/layout/image_icon/select_btn01.png);
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
