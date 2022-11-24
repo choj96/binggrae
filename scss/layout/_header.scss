@@ -9,7 +9,8 @@
     width: 100%;
     border-bottom: 1px solid #e7e7e7;
     .inner {
-      width: 1760px;
+      width: 100%;
+      max-width: 1760px;
       height: 31px;
       @at-root .header-link {
         float: right;
@@ -55,10 +56,10 @@
   }
   @at-root .header-main {
     width: 100%;
-    border-bottom: 1px solid #e7e7e7;
     z-index: 999;
     .inner {
-      width: 1760px;
+      width: 100%;
+      max-width: 1760px;
       height: 116px;
       display: flex;
       align-items: center;
@@ -88,8 +89,8 @@
             margin-right: 80px;
             &:hover {
               > a {
-                color: #e0462e;
-                border-bottom: 2px solid #e0462e;
+                color: $binggrae-red;
+                border-bottom: 2px solid $binggrae-red;
                 &:hover::after {
                   content: "";
                 }
@@ -113,7 +114,7 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background: #e0462e;
+                background: $binggrae-red;
               }
             }
             .depth2 {
@@ -136,7 +137,7 @@
                   white-space: nowrap;
                   transition: color 0.5s;
                   &:hover {
-                    color: #e0462e;
+                    color: $binggrae-red;
                   }
                 }
               }
@@ -277,7 +278,7 @@
         box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);
         transform: translateY(-10px);
         > a {
-          color: #e0462e;
+          color: $binggrae-red;
         }
       }
       > a {
@@ -300,7 +301,7 @@
             white-space: nowrap;
             transition: color 0.5s;
             &:hover {
-              color: #e0462e;
+              color: $binggrae-red;
               &::after {
                 content: "";
                 position: absolute;
