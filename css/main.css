@@ -2,8 +2,7 @@
 @import url("font/font.css");
 @font-face {
   font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -580,7 +579,7 @@ body {
 .qna-list li:nth-child(2n) {
   float: right;
 }
-.qna-list li:nth-child(2n + 1) {
+.qna-list li:nth-child(2n+1) {
   float: left;
 }
 .qna-list li a {
