@@ -1,6 +1,7 @@
 .product {
   padding-bottom: 140px;
   .inner {
+    max-width: 1650px;
     .product-top {
       .t-product-title {
         font-family: "binggraebold";
@@ -9,24 +10,112 @@
         margin-bottom: 47px;
       }
       .t-slide {
-        .t-prev-arrow {}
-        .t-next-arrow {}
-        .t-slide-img {}
-        .t-slide-txt {}
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: center;
+        .t-prev-arrow {
+          width: 7px;
+          height: 15px;
+          top: 5px;
+          border: 0;
+          opacity: 0.1;
+          background: url("../images/layout/image_icon/prev_arrow.png")
+            no-repeat;
+          cursor: pointer;
+        }
+        .t-next-arrow {
+          width: 8px;
+          height: 15px;
+          top: 5px;
+          border: 0;
+          background: url("../images/layout/image_icon/next_arrow.png")
+            no-repeat;
+          cursor: pointer;
+        }
+        .t-flexbox {
+          max-width: 1650px;
+          .t-slide-img {
+            display: flex;
+            gap: 18px;
+            justify-content: space-between;
+            > li {
+              > a {
+                > img {
+                  display: block;
+                  width: 242px;
+                  height: 242px;
+                }
+                > p {
+                  margin-top: 12px;
+                  width: 242px;
+                  border-radius: 21px;
+                  background-color: #f9f9f9;
+                  height: 43px;
+                  text-align: center;
+                  line-height: 43px;
+                  &:hover {
+                    background-color: #e82d28;
+                    transition: background 0.5s;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
+
     .product-bottom {
       .b-product-title {
         font-family: "binggraebold";
         font-size: 38px;
         text-align: center;
         margin-bottom: 55px;
+        margin-top: 171px;
+        text-transform: uppercase;
       }
       .b-slide {
-        .b-prev-arrow {}
-        .b-next-arrow {}
-        .
-
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        align-items: center;
+        .b-prev-arrow {
+          position: relative;
+          width: 7px;
+          height: 15px;
+          border: 0;
+          opacity: 0.1;
+          background: url("../images/layout/image_icon/prev_arrow.png")
+            no-repeat;
+          cursor: pointer;
+        }
+        .b-next-arrow {
+          position: relative;
+          line-height: 242px;
+          width: 8px;
+          height: 15px;
+          border: 0;
+          background: url("../images/layout/image_icon/next_arrow.png")
+            no-repeat;
+          cursor: pointer;
+        }
+        .b-flexbox {
+          .b-slide-img {
+            display: flex;
+            text-align: center;
+            line-height: 242px;
+            gap: 18px;
+            justify-content: space-between;
+            > li {
+              display: block;
+              width: 242px;
+              height: 242px;
+              border-radius: 30px;
+              border: 1px solid #edecef;
+            }
+          }
+        }
       }
     }
   }
