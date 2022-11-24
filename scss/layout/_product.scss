@@ -1,132 +1,32 @@
 .product {
-  margin-top: 120px;
+  padding-bottom: 140px;
   .inner {
-    max-width: 1650px;
-    .h-binggrae {
-      font-family: "binggraebold";
-      font-size: 38px;
-      font-weight: bold;
-      text-align: center;
-      color: #1f1f1f;
-      margin-bottom: 20px;
-    }
     .product-top {
-      padding: 20px 0;
-      max-width: 1650px;
-      width: 100%;
-      margin: 0 auto 140px;
-      .top-bt {
-        .prev-bt {
-          display: block;
-          width: 7px;
-          height: 15px;
-          left: 0;
-          border: 0;
-          opacity: 0.1;
-          background: url("../images/layout/image_icon/prev_arrow.png")
-            no-repeat;
-          cursor: pointer;
-        }
-        .next-bt {
-          display: block;
-          width: 8px;
-          height: 15px;
-          right: 0;
-          border: 0;
-          background: url("../images/layout/image_icon/next_arrow.png")
-            no-repeat;
-          cursor: pointer;
-        }
+      .t-product-title {
+        font-family: "binggraebold";
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 47px;
       }
-      .pt-slide {
-        .slide-t {
-          display: flex;
-          gap: 18px;
-          justify-content: center;
-        }
+      .t-slide {
+        .t-prev-arrow {}
+        .t-next-arrow {}
+        .t-slide-img {}
+        .t-slide-txt {}
       }
     }
-    .pt-txt {
-      margin-top: 12px;
-      .txt-box {
-        .txt-name {
-          display: flex;
-          gap: 18px;
-          justify-content: center;
-          > li {
-            width: 251px;
-            height: 43px;
-            border-radius: 21px;
-            color: #1f1f1f;
-            font-size: 16px;
-            background-color: #f9f9f9;
-            > a {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              line-height: 43px;
-            }
-          }
-        }
+    .product-bottom {
+      .b-product-title {
+        font-family: "binggraebold";
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 55px;
       }
-    }
-  }
-  .h-brand {
-    font-family: "binggraebold";
-    font-size: 38px;
-    font-weight: bold;
-    text-align: center;
-    color: #1f1f1f;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  .product-bottom {
-    max-width: 1650px;
-    width: 100%;
-    .bt-bt {
-      .b-prev-bt {
-        display: block;
-        position: absolute;
-        width: 7px;
-        height: 15px;
-        left: 0;
-        border: 0;
-        opacity: 0.1;
-        background: url("../images/layout/image_icon/prev_arrow.png") no-repeat;
-        cursor: pointer;
-      }
-      .b-next-bt {
-        display: block;
-        position: absolute;
-        width: 8px;
-        height: 15px;
-        right: 0;
-        border: 0;
-        background: url("../images/layout/image_icon/next_arrow.png") no-repeat;
-        cursor: pointer;
-      }
-    }
+      .b-slide {
+        .b-prev-arrow {}
+        .b-next-arrow {}
+        .
 
-    .pb-slide {
-      padding: 20px 0;
-      .slide-b {
-        display: flex;
-        gap: 18px;
-        justify-content: center;
-        > li {
-          width: 251px;
-          height: 251px;
-          > a {
-            border: solid 1px #edecef;
-            height: 100%;
-            background-color: #fff;
-            position: relative;
-            display: block;
-            border-radius: 30px;
-            text-align: center;
-            line-height: 251px;
-          }
-        }
       }
     }
   }
