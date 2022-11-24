@@ -211,7 +211,7 @@ body {
 .qna-list li .qna-icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: scale(1) translateY(-50%);
   right: 18px;
   display: flex;
   justify-content: center;
@@ -220,6 +220,11 @@ body {
   height: 47px;
   background-color: #ed1c24;
   border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.qna-list li .qna-icon:hover {
+  display: block;
+  transform: scale(0);
 }
 
 .report .inner {
@@ -334,28 +339,51 @@ body {
 .footer .inner .f-bottom .copy {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.3);
+  letter-spacing: -0.8px;
 }
 .footer .inner .f-bottom .f-bottom-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .footer .inner .f-bottom .f-bottom-right .sns .sns-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .footer .inner .f-bottom .f-bottom-right .sns .sns-list > li > a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
   background: #1b1b1b;
-  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgb(73, 73, 73);
+  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.3);
   border-radius: 50%;
 }
-.footer .inner .f-bottom .f-bottom-right .flagship span {
+.footer .inner .f-bottom .flagship {
+  position: relative;
+  display: block;
+  width: 355px;
+  line-height: 70px;
+  background: #1b1b1b;
+  box-shadow: 4px 8px 1px rgb(0, 0, 0), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.3);
+  border-radius: 30px;
+  margin-left: 60px;
+  padding: 0 18px;
+}
+.footer .inner .f-bottom .flagship .flagship-btn {
+  margin-right: 18px;
+}
+.footer .inner .f-bottom .flagship span {
   font-size: 14px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
 }
-.footer .inner .f-bottom .f-bottom-right .flagship span::after {
-  background: url(../../images/layout/image_icon/select_btn01.png);
+.footer .inner .f-bottom .flagship span::after {
+  content: url(../../images/layout/image_icon/select_btn01.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  right: 20px;
 }

@@ -123,7 +123,7 @@
             .qna-icon {
               position: absolute;
               top: 50%;
-              transform: translateY(-50%);
+              transform: scale(1) translateY(-50%);
               right: 18px;
               display: flex;
               justify-content: center;
@@ -132,6 +132,11 @@
               height: 47px;
               background-color: #ed1c24;
               border-radius: 50%;
+              transition: all 0.5s ease;
+              &:hover {
+                display: block;
+                transform: scale(0);
+              }
             }
           }
         }
