@@ -1,14 +1,16 @@
+$binggrae-red: #ed1c24;
+
 @mixin adviceBox {
-  width: 590px;
-  height: 324px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 48%;
+  height: 323px;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   border-radius: 30px;
   padding: 50px 40px;
 }
 @mixin reportBox {
-  width: 630px;
+  width: 48%;
   height: 230px;
   background: #f9f9f9;
   border-radius: 30px;

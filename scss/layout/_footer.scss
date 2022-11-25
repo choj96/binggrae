@@ -1,4 +1,5 @@
 .footer {
+  background: #1b1b1b;
   .inner {
     width: 100%;
     background: #1b1b1b;
@@ -31,12 +32,28 @@
       justify-content: space-between;
       align-items: center;
       .service {
-        display: none;
+        > a {
+          display: none;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.4);
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.4);
+            margin: 0 10px;
+          }
+          &:last-child::after {
+            display: none;
+          }
+        }
       }
       .copy {
         font-size: 14px;
         color: rgba(255, 255, 255, 0.3);
         letter-spacing: -0.8px;
+        word-break: keep-all;
       }
       @at-root .f-bottom-right {
         display: flex;
@@ -61,31 +78,83 @@
             }
           }
         }
-      }
-      @at-root .flagship {
-        position: relative;
-        display: block;
-        width: 355px;
-        line-height: 70px;
-        background: #1b1b1b;
-        box-shadow: 4px 8px 1px rgb(0 0 0 / 0.2),
-          inset 0px 4px 10px 2px rgb(73 73 73 / 0.2);
-        border-radius: 30px;
-        margin-left: 60px;
-        padding: 0 18px;
-        .flagship-btn {
-          margin-right: 18px;
+        @at-root .flagship {
+          position: relative;
+          display: block;
+          width: 355px;
+          line-height: 70px;
+          background: #1b1b1b;
+          box-shadow: 4px 8px 1px rgb(0 0 0 / 0.2),
+            inset 0px 4px 10px 2px rgb(73 73 73 / 0.2);
+          border-radius: 30px;
+          margin-left: 60px;
+          padding: 0 18px;
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            padding-left: 18px;
+            color: rgba(255, 255, 255, 0.3);
+            &::after {
+              content: url("../images/layout/image_icon/select_btn01.png");
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%) rotate(-90deg);
+              right: 20px;
+            }
+          }
         }
-        span {
-          font-size: 14px;
-          font-weight: 500;
-          color: rgba(255, 255, 255, 0.3);
-          &::after {
-            content: url("../images/layout/image_icon/select_btn01.png");
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%) rotate(-90deg);
-            right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .f-top {
+    flex-direction: column-reverse;
+    .f-top-right {
+      margin-bottom: 50px;
+    }
+  }
+  .f-main {
+    P {
+      text-align: center;
+      margin: 0 !important;
+    }
+  }
+  .f-bottom {
+    flex-direction: column-reverse;
+    .f-bottom-left {
+      position: relative;
+      width: 100%;
+      padding-top: 80px;
+      display: flex;
+      justify-content: space-between !important;
+      .service > a {
+        display: inline-block !important;
+      }
+    }
+    .f-bottom-right {
+      flex-direction: column;
+
+      .sns-list {
+        > li > a {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      .flagship {
+        width: 250px;
+        height: 45px;
+        margin-top: 13px;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        > .flagship-btn {
+          position: relative;
+          display: block;
+          line-height: 45px;
+          img {
+            width: 32px;
+            margin-left: 20px;
           }
         }
       }

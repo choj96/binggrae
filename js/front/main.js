@@ -13,23 +13,18 @@ const lang_list = document.querySelector(".lang-list");
 let hamburgerToggle = false;
 btn_hamburger.addEventListener("click", () => {
   if (hamburgerToggle === false) {
-    window.scrollTo(0, 0);
+    scrollTop();
     hamburger_menu.classList.add("on");
     header_nav.classList.add("off");
     btn_hamburger.classList.add("hamburger-toggle");
-    header_main.style.borderBottom = "none";
-    header_bg.classList.remove("header-bg-open");
-    for (i = 0; i < header_depth.length; i++) {
-      header_depth[i].classList.remove("depth2-on");
-    }
+    closeDepth2();
     disableScroll();
     hamburgerToggle = true;
   } else if (hamburgerToggle === true) {
-    window.scrollTo(0, 0);
+    scrollTop();
     hamburger_menu.classList.remove("on");
     header_nav.classList.remove("off");
     btn_hamburger.classList.remove("hamburger-toggle");
-    header_main.style.borderBottom = "1px solid #e7e7e7";
     enableScroll();
     hamburgerToggle = false;
   }
@@ -42,36 +37,52 @@ btn_lang.addEventListener("click", () => {
     lang_list.classList.add("lang-list-on");
     langToggle = true;
   } else if (langToggle === true) {
-    langToggle = false;
     lang_list.classList.remove("lang-list-on");
+    langToggle = false;
   }
 });
 
 // 스크롤 시 헤더 색상
 window.addEventListener("scroll", () => headerColor());
-function headerColor() {
-  if (window.scrollY > 0) {
-    header.style.background = "#fff";
-  } else if (window.scrollY === 0) {
-    header.style.background = "transparent";
-  }
-}
 
 // 헤더 네비게이션 온오프
 header_gnb.addEventListener("mouseover", () => {
   header_bg.classList.add("header-bg-open");
+  header_main.style.borderBottom = "1px solid #e7e7e7";
   for (i = 0; i < header_depth.length; i++) {
     header_depth[i].classList.add("depth2-on");
   }
 });
 header.addEventListener("mouseout", () => {
   header_bg.addEventListener("mouseout", () => {
-    header_bg.classList.remove("header-bg-open");
-    for (i = 0; i < header_depth.length; i++) {
-      header_depth[i].classList.remove("depth2-on");
-    }
+    closeDepth2();
   });
 });
+
+// 헤더 색상
+function headerColor() {
+  if (window.scrollY > 0) {
+    header.style.background = "#fff";
+    header_main.style.borderBottom = "1px solid #e7e7e7";
+  } else if (window.scrollY === 0) {
+    header.style.background = "transparent";
+    header_main.style.borderBottom = "none";
+  }
+}
+
+// 네비 뎁스 닫기
+function closeDepth2() {
+  header_bg.classList.remove("header-bg-open");
+  for (i = 0; i < header_depth.length; i++) {
+    header_depth[i].classList.remove("depth2-on");
+  }
+  headerColor();
+}
+
+// 최상단 이동
+function scrollTop() {
+  window.scrollTo(0, 0);
+}
 
 // 스크롤 활성 비활성화
 function disableScroll() {
