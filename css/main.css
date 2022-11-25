@@ -778,6 +778,9 @@ body {
   font-size: 16px;
   word-break: keep-all;
 }
+.email-box p .br {
+  display: none;
+}
 .email-box .viewButton {
   position: absolute;
   display: block;
@@ -940,6 +943,11 @@ body {
   .email-box > p,
 .tel-box > p {
     font-size: 14px;
+    line-height: 20px;
+  }
+  .email-box > p .br,
+.tel-box > p .br {
+    display: block;
   }
   .email-box .tel,
 .tel-box .tel {
@@ -985,6 +993,10 @@ body {
 .tel-box p {
     font-size: 12px;
     padding-bottom: 0;
+  }
+  .email-box p .hide,
+.tel-box p .hide {
+    display: none;
   }
   .email-box .tel,
 .tel-box .tel {
