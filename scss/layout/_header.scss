@@ -7,10 +7,10 @@
   z-index: 9999;
   @at-root .header-top {
     width: 100%;
+    padding: 0 80px;
     border-bottom: 1px solid #e7e7e7;
     .inner {
       width: 100%;
-      max-width: 1760px;
       height: 31px;
       @at-root .header-link {
         float: right;
@@ -56,10 +56,10 @@
   }
   @at-root .header-main {
     width: 100%;
+    padding: 0 80px;
     z-index: 999;
     .inner {
       width: 100%;
-      max-width: 1760px;
       height: 116px;
       display: flex;
       align-items: center;
@@ -350,5 +350,54 @@
   span:nth-child(3) {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .header-main {
+    padding: 0 20px !important;
+  }
+  .header-gnb > li {
+    padding-right: 50px !important;
+  }
+  .header-gnb > li > a {
+    font-size: 16px !important;
+  }
+  .header-gnb .depth2 > li > a {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 117px;
+  }
+  .header-top {
+    display: none;
+  }
+  .header-main {
+    padding: 0 20px !important;
+  }
+  .header-logo {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 117px;
+    height: 27px;
+    font-size: 0;
+    background: url("../images/layout/header/logo_mo.png");
+    background-size: 117px 27px;
+  }
+  .header-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 72px;
+  }
+  .header-main > .inner {
+    height: 72px;
   }
 }
