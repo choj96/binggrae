@@ -363,7 +363,22 @@
   .header-gnb > li > a {
     font-size: 16px !important;
   }
-  .header-gnb .depth2 > li > a {
+  .hamburger-menu {
+    align-items: unset;
+  }
+  .hamburger-gnb {
+    margin: 150px 40px 0 40px;
+  }
+  .hamburger-gnb > li {
+    padding: 30px 15px 20px 15px;
+  }
+  .hamburger-gnb > li > a {
+    font-size: 20px !important;
+  }
+  .depth2 {
+    margin-top: 10px !important;
+  }
+  .depth2 > li > a {
     font-size: 14px !important;
   }
 }
