@@ -79,12 +79,12 @@
                     opacity: 0;
                     visibility: hidden;
                   }
-                  &:hover {
-                    .txt-view {
-                      opacity: 1;
-                      visibility: visible;
-                      color: #fff;
-                    }
+                }
+                &:hover {
+                  .txt-view {
+                    opacity: 1;
+                    visibility: visible;
+                    color: #fff;
                   }
                 }
               }
