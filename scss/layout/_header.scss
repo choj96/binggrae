@@ -9,7 +9,8 @@
     width: 100%;
     border-bottom: 1px solid #e7e7e7;
     .inner {
-      width: 1760px;
+      width: 100%;
+      max-width: 1760px;
       height: 31px;
       @at-root .header-link {
         float: right;
@@ -55,9 +56,10 @@
   }
   @at-root .header-main {
     width: 100%;
-    border-bottom: 1px solid #e7e7e7;
+    z-index: 999;
     .inner {
-      width: 1760px;
+      width: 100%;
+      max-width: 1760px;
       height: 116px;
       display: flex;
       align-items: center;
@@ -83,12 +85,11 @@
           display: flex;
           > li {
             position: relative;
-            padding: 48px 0px;
-            margin-right: 80px;
+            padding: 48px 80px 0px 0px;
             &:hover {
               > a {
-                color: #e0462e;
-                border-bottom: 2px solid #e0462e;
+                color: $binggrae-red;
+                border-bottom: 2px solid $binggrae-red;
                 &:hover::after {
                   content: "";
                 }
@@ -112,7 +113,7 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background: #e0462e;
+                background: $binggrae-red;
               }
             }
             .depth2 {
@@ -121,26 +122,35 @@
               left: 0;
               top: 118px;
               padding: 17px 0 36px 0;
-              height: 0px;
+              height: 100%;
               opacity: 0;
               visibility: hidden;
-              transition: opacity 0.5s;
+              transition: opacity 2.5s;
               > li {
                 > a {
+                  position: relative;
                   display: block;
-                  padding: 7px 0;
+                  padding: 7px 80px 7px 0;
                   font-size: 18px;
                   line-height: 1.5;
-                  letter-spacing: 0.2px;
+                  letter-spacing: 0px;
                   white-space: nowrap;
                   transition: color 0.5s;
                   &:hover {
-                    color: #e0462e;
+                    color: $binggrae-red;
                   }
                 }
               }
             }
+            .depth2-on {
+              opacity: 1 !important;
+              visibility: visible !important;
+            }
           }
+          // &:hover .depth2 {
+          //   opacity: 1 !important;
+          //   visibility: visible !important;
+          // }
         }
       }
       @at-root .header-main-right {
@@ -177,6 +187,7 @@
             padding: 9px 0;
             box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
             transform: scaleY(0);
+            transform-origin: top;
             transition: transform 0.5s;
             > li {
               text-align: center;
@@ -188,6 +199,9 @@
                 cursor: pointer;
               }
             }
+          }
+          > .lang-list-on {
+            transform: scaleY(1);
           }
         }
         @at-root .header-hamburger {
@@ -205,7 +219,7 @@
             height: 2px;
             background: #000;
             margin-top: 8px;
-            transition: all 0.5s;
+            transition: all 0.3s;
             &:first-child {
               margin-top: 0;
             }
@@ -214,6 +228,25 @@
       }
     }
   }
+}
+.header-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 198px;
+  border-radius: 0 0 50px 50px;
+  background: #fff;
+  box-shadow: 0px 2px 9.8px 0.2px rgb(0 0 0 / 8%);
+  opacity: 0;
+  visibility: hidden;
+  transition: height 0.5s;
+  z-index: 9999;
+}
+.header-bg-open {
+  opacity: 1;
+  visibility: visible;
+  height: 573px;
 }
 .hamburger-menu {
   position: fixed;
@@ -240,8 +273,13 @@
       border: 1px solid #ececed;
       border-radius: 30px;
       padding: 50px 30px 20px 30px;
-      &:hover > a {
-        color: #e0462e;
+      transition: transform 0.5s;
+      &:hover {
+        box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);
+        transform: translateY(-10px);
+        > a {
+          color: $binggrae-red;
+        }
       }
       > a {
         font-family: "binggraebold";
@@ -255,22 +293,26 @@
         > li {
           > a {
             position: relative;
-            display: inline;
-            padding: 10px 0;
+            display: inline-block;
+            width: 100%;
+            padding: 5px 0;
             font-size: 18px;
+            line-height: 1;
             white-space: nowrap;
             transition: color 0.5s;
             &:hover {
-              color: #e0462e;
-            }
-            &::after {
-              content: "";
-              position: relative;
-              display: inline;
-              width: 13px;
-              height: 13px;
-              background: url("../images/layout/image_icon/link_arrow01.png") no-repeat;
-              float: right;
+              color: $binggrae-red;
+              &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 5px;
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                background: url("../images/layout/image_icon/m_link_arrow01_red.png") no-repeat;
+                background-size: 13px 13px;
+              }
             }
           }
           > .depth3 {

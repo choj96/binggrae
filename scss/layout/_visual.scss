@@ -32,6 +32,12 @@
           background: url(../images/layout/image_icon/search_icon.png) no-repeat center left;
           border: 0;
           outline: none;
+          &::placeholder {
+            color: #8f8f8f;
+          }
+          &:focus::placeholder {
+            opacity: 0;
+          }
         }
         .visual-search-bt {
           width: 180px;
