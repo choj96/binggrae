@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  word-break: break-all;
 }
 
 ul,
@@ -519,6 +518,7 @@ body {
 }
 .email-box p {
   font-size: 16px;
+  word-break: keep-all;
 }
 .email-box .viewButton {
   position: absolute;
@@ -635,6 +635,15 @@ body {
   transform: scale(0);
   transition: all 0.5s ease;
 }
+.qna-list li .mo-qna-icon {
+  position: absolute;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 47px;
+  line-height: 47px;
+}
 
 @media screen and (max-width: 1400px) {
   .inner {
@@ -719,9 +728,19 @@ body {
     font-size: 12px;
     padding-bottom: 0;
   }
+  .email-box .tel,
+.tel-box .tel {
+    font-size: 30px;
+  }
   .qna-list a {
     font-size: 14px !important;
     line-height: 55px !important;
+  }
+  .qna-icon {
+    display: none !important;
+  }
+  .mo-qna-icon {
+    display: block !important;
   }
 }
 .report .inner {
@@ -805,13 +824,21 @@ body {
 }
 
 @media screen and (max-width: 1400px) {
-  p {
+  .cyber > p,
+.safe > p {
     font-size: 18px !important;
   }
 }
 @media screen and (max-width: 1024px) {
-  p {
+  .cyber > p,
+.safe > p {
     font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 840px) {
+  .cyber > p,
+.safe > p {
+    font-size: 14px !important;
   }
 }
 @media screen and (max-width: 770px) {
@@ -859,13 +886,27 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.footer .inner .f-bottom .service {
+.footer .inner .f-bottom .service > a {
+  display: none;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.footer .inner .f-bottom .service > a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 0 10px;
+}
+.footer .inner .f-bottom .service > a:last-child::after {
   display: none;
 }
 .footer .inner .f-bottom .copy {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: -0.8px;
+  word-break: keep-all;
 }
 .f-bottom-right {
   display: flex;
@@ -888,7 +929,6 @@ body {
   box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.2), inset 0px 4px 10px 2px rgba(73, 73, 73, 0.2);
   border-radius: 50%;
 }
-
 .flagship {
   position: relative;
   display: block;
@@ -900,12 +940,10 @@ body {
   margin-left: 60px;
   padding: 0 18px;
 }
-.flagship .flagship-btn {
-  margin-right: 18px;
-}
 .flagship span {
   font-size: 14px;
   font-weight: 500;
+  padding-left: 18px;
   color: rgba(255, 255, 255, 0.3);
 }
 .flagship span::after {
@@ -914,4 +952,53 @@ body {
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   right: 20px;
+}
+
+@media screen and (max-width: 770px) {
+  .f-top {
+    flex-direction: column-reverse;
+  }
+  .f-top .f-top-right {
+    margin-bottom: 50px;
+  }
+  .f-main P {
+    text-align: center;
+    margin: 0 !important;
+  }
+  .f-bottom {
+    flex-direction: column-reverse;
+  }
+  .f-bottom .f-bottom-left {
+    position: relative;
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .f-bottom .f-bottom-left .service > a {
+    display: inline-block !important;
+  }
+  .f-bottom .f-bottom-right {
+    flex-direction: column;
+  }
+  .f-bottom .f-bottom-right .sns-list > li > a {
+    width: 45px;
+    height: 45px;
+  }
+  .f-bottom .f-bottom-right .flagship {
+    width: 250px;
+    height: 45px;
+    margin-top: 13px;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  .f-bottom .f-bottom-right .flagship > .flagship-btn {
+    position: relative;
+    display: block;
+    line-height: 45px;
+  }
+  .f-bottom .f-bottom-right .flagship > .flagship-btn img {
+    width: 32px;
+    margin-left: 20px;
+  }
 }
