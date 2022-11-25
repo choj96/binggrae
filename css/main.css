@@ -515,34 +515,43 @@ body {
 .product .inner {
   max-width: 1650px;
 }
-.product .inner .product-top .t-product-title {
+.product .inner .t-product-title {
   font-family: "binggraebold";
   font-size: 38px;
   text-align: center;
   margin-bottom: 47px;
+}
+.product .inner .product-top {
+  position: relative;
+}
+.product .inner .product-top .t-prev-arrow {
+  position: absolute;
+  width: 7px;
+  height: 15px;
+  border: 0;
+  outline: 0;
+  opacity: 0.1;
+  top: 50%;
+  background: transparent;
+  left: 0px;
+  cursor: pointer;
+}
+.product .inner .product-top .t-next-arrow {
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
 }
 .product .inner .product-top .t-slide {
   display: flex;
   gap: 18px;
   align-items: center;
   justify-content: center;
-}
-.product .inner .product-top .t-slide .t-prev-arrow {
-  width: 7px;
-  height: 15px;
-  top: 5px;
-  border: 0;
-  opacity: 0.1;
-  background: url("../images/layout/image_icon/prev_arrow.png") no-repeat;
-  cursor: pointer;
-}
-.product .inner .product-top .t-slide .t-next-arrow {
-  width: 8px;
-  height: 15px;
-  top: 5px;
-  border: 0;
-  background: url("../images/layout/image_icon/next_arrow.png") no-repeat;
-  cursor: pointer;
 }
 .product .inner .product-top .t-slide .t-flexbox {
   max-width: 1650px;
@@ -552,25 +561,47 @@ body {
   gap: 18px;
   justify-content: space-between;
 }
+.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a {
+  position: relative;
+  font-size: 16px;
+}
 .product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a > img {
   display: block;
   width: 242px;
   height: 242px;
 }
-.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a > p {
+.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a .product_title {
+  position: relative;
   margin-top: 12px;
+}
+.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a .product_title > p {
+  position: absolute;
   width: 242px;
-  border-radius: 21px;
-  background-color: #f9f9f9;
   height: 43px;
   text-align: center;
   line-height: 43px;
+  border-radius: 21px;
+  color: #1f1f1f;
+  background-color: #f9f9f9;
 }
-.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a > p:hover {
-  background-color: #e82d28;
-  transition: background 0.5s;
+.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a .product_title > .txt-view {
+  position: absolute;
+  display: block;
+  text-transform: uppercase;
+  width: 242px;
+  height: 43px;
+  text-align: center;
+  line-height: 43px;
+  background-color: #e73129;
+  opacity: 0;
+  visibility: hidden;
 }
-.product .inner .product-bottom .b-product-title {
+.product .inner .product-top .t-slide .t-flexbox .t-slide-img > li > a .product_title:hover .txt-view {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+.product .product-bottom .b-product-title {
   font-family: "binggraebold";
   font-size: 38px;
   text-align: center;
@@ -578,13 +609,13 @@ body {
   margin-top: 171px;
   text-transform: uppercase;
 }
-.product .inner .product-bottom .b-slide {
+.product .product-bottom .b-slide {
   display: flex;
   gap: 18px;
   justify-content: center;
   align-items: center;
 }
-.product .inner .product-bottom .b-slide .b-prev-arrow {
+.product .product-bottom .b-slide .b-prev-arrow {
   position: relative;
   width: 7px;
   height: 15px;
@@ -593,7 +624,7 @@ body {
   background: url("../images/layout/image_icon/prev_arrow.png") no-repeat;
   cursor: pointer;
 }
-.product .inner .product-bottom .b-slide .b-next-arrow {
+.product .product-bottom .b-slide .b-next-arrow {
   position: relative;
   line-height: 242px;
   width: 8px;
@@ -602,14 +633,14 @@ body {
   background: url("../images/layout/image_icon/next_arrow.png") no-repeat;
   cursor: pointer;
 }
-.product .inner .product-bottom .b-slide .b-flexbox .b-slide-img {
+.product .product-bottom .b-slide .b-flexbox .b-slide-img {
   display: flex;
   text-align: center;
   line-height: 242px;
   gap: 18px;
   justify-content: space-between;
 }
-.product .inner .product-bottom .b-slide .b-flexbox .b-slide-img > li {
+.product .product-bottom .b-slide .b-flexbox .b-slide-img > li {
   display: block;
   width: 242px;
   height: 242px;
