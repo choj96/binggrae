@@ -13,12 +13,23 @@ window.onload = () => {
   const hamburger_gnb_item = document.querySelectorAll(".hamburger-gnb > li > a");
   const hamburger_gnb_depth2 = document.querySelectorAll(".hamburger-gnb > li > .depth2");
 
+  let hamburgerMobileToggle = [];
   for (i = 0; i < hamburger_gnb_item.length; i++) {
+    hamburgerMobileToggle.push(false);
+  }
+
+  for (let i = 0; i < hamburger_gnb_item.length; i++) {
     hamburger_gnb_depth2[i].classList.remove("on");
-    let temp = i;
     hamburger_gnb_item[i].addEventListener("click", () => {
       hamburger_gnb_depth2.forEach((element) => element.classList.remove("on"));
-      hamburger_gnb_depth2[temp].classList.add("on");
+      hamburgerMobileToggle.forEach((element) => (element = false));
+      if (hamburgerMobileToggle[i] === false) {
+        hamburger_gnb_depth2[i].classList.add("on");
+        hamburgerMobileToggle[i] = true;
+      } else if (hamburgerMobileToggle[i] === true) {
+        hamburger_gnb_depth2[i].classList.remove("on");
+        hamburgerMobileToggle[i] = false;
+      }
     });
   }
 
@@ -123,4 +134,28 @@ window.onload = () => {
   function enableScroll() {
     document.body.style.overflow = "visible";
   }
+
+  //top 버튼 기능
+  const topBtn = document.getElementById("top-btn");
+  topBtn.addEventListener("click", function (event) {
+    console.log(event);
+    console.log(this.tagName);
+    if (this.tagName === "A") {
+      event.preventDefault();
+    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // 화살표 이미지 회전
+  function scrollRotate() {
+    const topBtnImg = document.getElementById("top-btn-img");
+    topBtnImg.classList.add("up");
+    // 클래스를 추가하여 스크롤시 지속회전되는것 방지
+  }
+  window.addEventListener("scroll", scrollRotate);
+
+  //top 도달시 화살표 이미지 회전 초기화
 };

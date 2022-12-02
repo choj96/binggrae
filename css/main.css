@@ -660,6 +660,7 @@ body {
     padding: 11px 20px 11px 38px;
     background: #f7f7f7;
     display: none;
+    transform: scaleY(0);
     height: 0;
   }
   .hamburger-gnb > li > .depth2 > li {
