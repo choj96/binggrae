@@ -74,7 +74,14 @@ body {
     border-radius: 50%;
     font-size: 14px;
     text-align: center;
+    img {
+      transform: rotate(180deg);
+    }
+    img.up {
+      transform: rotate(0deg);
+    }
   }
+
   .shop-btn {
     background: #fff;
     box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
