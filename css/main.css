@@ -84,6 +84,12 @@ body {
   font-size: 14px;
   text-align: center;
 }
+.top-button a img {
+  transform: rotate(180deg);
+}
+.top-button a img.up {
+  transform: rotate(0deg);
+}
 .top-button .shop-btn {
   background: #fff;
   box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
@@ -1048,6 +1054,9 @@ body {
   font-size: 16px;
   word-break: keep-all;
 }
+.email-box p .br {
+  display: none;
+}
 .email-box .viewButton {
   position: absolute;
   display: block;
@@ -1210,6 +1219,11 @@ body {
   .email-box > p,
 .tel-box > p {
     font-size: 14px;
+    line-height: 20px;
+  }
+  .email-box > p .br,
+.tel-box > p .br {
+    display: block;
   }
   .email-box .tel,
 .tel-box .tel {
@@ -1255,6 +1269,10 @@ body {
 .tel-box p {
     font-size: 12px;
     padding-bottom: 0;
+  }
+  .email-box p .hide,
+.tel-box p .hide {
+    display: none;
   }
   .email-box .tel,
 .tel-box .tel {
@@ -1434,7 +1452,7 @@ body {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: -0.8px;
-  word-break: keep-all;
+  white-space: nowrap;
 }
 .f-bottom-right {
   display: flex;

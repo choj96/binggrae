@@ -83,14 +83,19 @@
     <!-- fontello -->
     <link rel="stylesheet" href="css/fontello/css/fontello.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/front/topBtn.js"></script>
     <script src="js/front/main.js"></script>
   </head>
   <body>
     <!-- top button -->
     <div class="top-button">
       <a href="#" target="_blank" class="shop-btn">SHOP</a>
-      <a href="#" class="top-btn">
-        <img src="images/layout/image_icon/fix_arrow.png" alt="binggrae" />
+      <a href="#" class="top-btn" id="top-btn">
+        <img
+          src="images/layout/image_icon/fix_arrow.png"
+          alt="binggrae"
+          id="top-btn-img"
+        />
       </a>
     </div>
     <div class="wrap">
@@ -353,6 +358,7 @@
                         src="images/layout/section_product/sec02_img02.png"
                         alt="우유/치즈"
                       />
+
                       <div class="product_title">
                         <p>우유/치즈</p>
                         <p class="txt-view">view more</p>
@@ -543,8 +549,12 @@
               <div class="email-box">
                 <h4>이메일 상담</h4>
                 <p>
-                  빙그레에 궁금한 사항을 문의해주세요<br />
-                  최대한 빠른 시일내에 친절하게 답변해 드리겠습니다.
+                  빙그레에 궁금한 사항을 <br class="br" />
+                  문의해주세요<br />
+                  <span class="hide">
+                    최대한 빠른 시일내에 <br class="br" />
+                    친절하게 답변해 드리겠습니다.
+                  </span>
                 </p>
                 <a
                   href="https://www.bing.co.kr/center/service_email"
@@ -566,7 +576,6 @@
               <a href="https://www.bing.co.kr/center/service" class="qna-more"
                 >더보기</a
               >
-
               <ul class="qna-list clearfix">
                 <li>
                   <a href="#">Q. 아이스크림에는 왜 유통기한이 없나요?</a>
