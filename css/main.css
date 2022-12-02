@@ -652,7 +652,7 @@ body {
     display: block;
     width: 9px;
     height: 5px;
-    background: url("../../images/layout/image_icon/m_ham_menu_btn.png");
+    background: url("../images/layout/image_icon/m_ham_menu_btn.png");
     background-size: 9px 5px;
   }
   .hamburger-gnb > li > .depth2 {
