@@ -10,8 +10,12 @@ window.onload = () => {
   const hamburger_menu = document.querySelector(".hamburger-menu");
   const btn_lang = document.querySelector(".lang-button");
   const lang_list = document.querySelector(".lang-list");
-  const hamburger_gnb_item = document.querySelectorAll(".hamburger-gnb > li > a");
-  const hamburger_gnb_depth2 = document.querySelectorAll(".hamburger-gnb > li > .depth2");
+  const hamburger_gnb_item = document.querySelectorAll(
+    ".hamburger-gnb > li > a"
+  );
+  const hamburger_gnb_depth2 = document.querySelectorAll(
+    ".hamburger-gnb > li > .depth2"
+  );
 
   let hamburgerMobileToggle = [];
   for (i = 0; i < hamburger_gnb_item.length; i++) {

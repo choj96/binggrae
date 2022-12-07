@@ -109,6 +109,63 @@
   }
 }
 
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  .chat_btn {
+    span {
+      position: absolute;
+      top: 30px;
+      right: 80px;
+      display: block;
+      width: 160px;
+      background: #fff;
+      border-radius: 23px;
+      box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.5);
+      font-weight: 700;
+      text-align: center;
+      line-height: 45px;
+    }
+  }
+  .shop-btn {
+    position: relative;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
+      inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    letter-spacing: 0.5px;
+  }
+  .top-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background: #000;
+    border-radius: 50%;
+    img {
+      transform: rotate(180deg);
+    }
+    img.up {
+      transform: rotate(0deg);
+    }
+  }
+}
+
 @media screen and (max-width: 770px) {
   .f-top {
     flex-direction: column-reverse;
