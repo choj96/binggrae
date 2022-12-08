@@ -1478,11 +1478,15 @@ body {
   gap: 10px;
   z-index: 999;
 }
+.top-button .chat_btn {
+  -webkit-animation: updown 2s infinite ease-in-out;
+          animation: updown 2s infinite ease-in-out;
+}
 .top-button .chat_btn span {
   position: absolute;
   top: 30px;
   right: 80px;
-  display: block;
+  display: none;
   width: 160px;
   background: #fff;
   border-radius: 23px;
@@ -1490,6 +1494,9 @@ body {
   font-weight: 700;
   text-align: center;
   line-height: 45px;
+}
+.top-button .chat_btn:hover span {
+  display: block;
 }
 .top-button .shop-btn {
   position: relative;
@@ -1521,6 +1528,29 @@ body {
   transform: rotate(0deg);
 }
 
+@-webkit-keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (max-width: 770px) {
   .f-top {
     flex-direction: column-reverse;

@@ -163,3 +163,7 @@ window.onload = () => {
 
   //top 도달시 화살표 이미지 회전 초기화
 };
+
+const btnRotate = document.querySelector(".top-btn"){
+  btnRotate.
+}

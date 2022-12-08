@@ -120,11 +120,12 @@
   gap: 10px;
   z-index: 999;
   .chat_btn {
+    animation: updown 2s infinite ease-in-out;
     span {
       position: absolute;
       top: 30px;
       right: 80px;
-      display: block;
+      display: none;
       width: 160px;
       background: #fff;
       border-radius: 23px;
@@ -133,7 +134,11 @@
       text-align: center;
       line-height: 45px;
     }
+    &:hover span {
+      display: block;
+    }
   }
+
   .shop-btn {
     position: relative;
     display: block;
@@ -163,6 +168,18 @@
     img.up {
       transform: rotate(0deg);
     }
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
