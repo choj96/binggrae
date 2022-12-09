@@ -54,6 +54,10 @@ body {
   margin: 0 auto;
 }
 
+.swiper {
+  width: 100%;
+}
+
 .wrap {
   position: relative;
   display: block;
@@ -858,34 +862,31 @@ body {
   display: block;
   position: relative;
   padding: 20px 0;
-}
-.pt-slide > ul {
   display: flex;
   max-width: 1573px;
   align-items: center;
   justify-content: center;
-  gap: 18px;
   margin: 0 auto;
 }
-.pt-slide > ul > li {
+.pt-slide .pt-item {
   transition: all 0.8s;
 }
-.pt-slide > ul > li:hover {
+.pt-slide .pt-item:hover {
   transform: translateY(-10px);
 }
-.pt-slide > ul > li > a {
+.pt-slide .pt-item > a {
   display: block;
   position: relative;
   font-size: 16px;
 }
-.pt-slide > ul > li > a > img {
+.pt-slide .pt-item > a > img {
   display: block;
   width: 242px;
   height: 242px;
-  cursor: default;
 }
 .pts-txt {
   position: relative;
+  display: block;
   margin-top: 12px;
 }
 .pts-txt > span {
@@ -908,7 +909,7 @@ body {
   visibility: hidden;
 }
 
-.pt-slide > ul > li:hover .pts-txt-hover {
+.pt-slide .pt-item:hover .pts-txt-hover {
   opacity: 1;
   visibility: visible;
   color: #fff;
@@ -960,19 +961,15 @@ body {
 }
 
 .pb-slide {
-  display: block;
   position: relative;
   padding: 20px 0;
-}
-.pb-slide > ul {
   display: flex;
   max-width: 1573px;
   align-items: center;
   justify-content: center;
-  gap: 18px;
   margin: 0 auto;
 }
-.pb-slide > ul > li {
+.pb-slide .pb-item {
   position: relative;
   width: 242px;
   height: 250px;
@@ -980,19 +977,19 @@ body {
   border: 1px solid #edecef;
   transition: all 0.7s;
 }
-.pb-slide > ul > li:hover {
+.pb-slide .pb-item:hover {
   transform: translateY(-10px);
   box-shadow: 0px 5px 24.3px 2.7px rgba(0, 0, 0, 0.09);
 }
-.pb-slide > ul > li:hover .pb-nomal > img {
+.pb-slide .pb-item:hover .pb-nomal > img {
   opacity: 0;
 }
-.pb-slide > ul > li:hover .pb-hover {
+.pb-slide .pb-item:hover .pb-hover {
   opacity: 1;
   transform: translateY(-110%);
   visibility: visible;
 }
-.pb-slide > ul > li:hover .redbt {
+.pb-slide .pb-item:hover .redbt {
   display: block;
 }
 .pb-nomal {

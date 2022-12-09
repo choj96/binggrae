@@ -46,6 +46,9 @@ body {
   display: block;
   margin: 0 auto;
 }
+.swiper {
+  width: 100%;
+}
 
 // layout
 .wrap {
@@ -84,8 +87,7 @@ body {
 
   .shop-btn {
     background: #fff;
-    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
-      inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
     margin-bottom: 10px;
     letter-spacing: 0.5px;
   }
