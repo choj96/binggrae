@@ -190,7 +190,3 @@ window.onload = function () {
     }
   }
 };
-
-// const btnRotate = document.querySelector(".top-btn"){
-//   btnRotate.
-// }
