@@ -157,11 +157,18 @@ window.onload = function () {
     const topBtn = document.getElementById("top-btn");
     topBtn.addEventListener("click", function (event) {
       event.preventDefault();
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      console.log(window.scrollY);
+      if (window.scrollY == 0) {
+        window.scrollTo({
+          top: 99999,
+          behavior: "smooth",
+        });
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     });
 
     // 화살표 이미지 회전

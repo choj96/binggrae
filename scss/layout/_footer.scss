@@ -138,7 +138,6 @@
       display: block;
     }
   }
-
   .shop-btn {
     position: relative;
     display: block;
@@ -233,6 +232,31 @@
           }
         }
       }
+    }
+  }
+  .top-button {
+    right: 20px;
+    bottom: 30px;
+    .chat_btn {
+      img {
+        width: 45px;
+      }
+      span {
+        top: 12px;
+        right: 55px;
+        width: 130px;
+        line-height: 30px;
+        font-size: 14px;
+      }
+    }
+    .shop-btn {
+      width: 45px;
+      line-height: 45px;
+      font-size: 12px;
+    }
+    .top-btn {
+      width: 45px;
+      height: 45px;
     }
   }
 }
