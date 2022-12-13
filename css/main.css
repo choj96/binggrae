@@ -1707,4 +1707,27 @@ body {
     width: 32px;
     margin-left: 20px;
   }
+  .top-button {
+    right: 20px;
+    bottom: 30px;
+  }
+  .top-button .chat_btn img {
+    width: 45px;
+  }
+  .top-button .chat_btn span {
+    top: 12px;
+    right: 55px;
+    width: 130px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  .top-button .shop-btn {
+    width: 45px;
+    line-height: 45px;
+    font-size: 12px;
+  }
+  .top-button .top-btn {
+    width: 45px;
+    height: 45px;
+  }
 }
