@@ -7,7 +7,7 @@ window.onload = function () {
     const btnHamburgerMobile = document.querySelector(".hamburger-off");
     const hamburgerMenu = document.querySelector(".hamburger-menu");
     btnHamburger.addEventListener("click", () => {
-      if (hamburgerMenu.classList.contains("off")) {
+      if (hamburgerMenu.classList.contains("on") == false) {
         scrollTop();
         hamburgerMenu.classList.add("on");
         headerNav.classList.add("off");
@@ -23,7 +23,7 @@ window.onload = function () {
       }
     });
     btnHamburgerMobile.addEventListener("click", () => {
-      if (hamburgerMenu.classList.contains("off")) {
+      if (hamburgerMenu.classList.contains("on") == true) {
         scrollTop();
         hamburgerMenu.classList.add("on");
         headerNav.classList.add("off");
@@ -40,12 +40,8 @@ window.onload = function () {
     });
 
     // 모바일 햄버거 메뉴
-    const hamburgerGnbItem = document.querySelectorAll(
-      ".hamburger-gnb > li > a"
-    );
-    const hamburgerGnbDepth = document.querySelectorAll(
-      ".hamburger-gnb > li > .depth2"
-    );
+    const hamburgerGnbItem = document.querySelectorAll(".hamburger-gnb > li > a");
+    const hamburgerGnbDepth = document.querySelectorAll(".hamburger-gnb > li > .depth2");
     let hamburgerMobileToggle = [];
     for (let i = 0; i < hamburgerGnbItem.length; i++) {
       hamburgerMobileToggle.push(false);
