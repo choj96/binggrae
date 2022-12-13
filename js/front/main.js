@@ -6,41 +6,36 @@ window.onload = function () {
     const btnHamburger = document.querySelector(".header-hamburger");
     const btnHamburgerMobile = document.querySelector(".hamburger-off");
     const hamburgerMenu = document.querySelector(".hamburger-menu");
-    let hamburgerToggle = false;
     btnHamburger.addEventListener("click", () => {
-      if (hamburgerToggle === false) {
+      if (hamburgerMenu.classList.contains("off")) {
         scrollTop();
         hamburgerMenu.classList.add("on");
         headerNav.classList.add("off");
         btnHamburger.classList.add("hamburger-toggle");
         closeDepth2();
         disableScroll();
-        hamburgerToggle = true;
-      } else if (hamburgerToggle === true) {
+      } else if (hamburgerMenu.classList.contains("on")) {
         scrollTop();
         hamburgerMenu.classList.remove("on");
         headerNav.classList.remove("off");
         btnHamburger.classList.remove("hamburger-toggle");
         enableScroll();
-        hamburgerToggle = false;
       }
     });
     btnHamburgerMobile.addEventListener("click", () => {
-      if (hamburgerToggle === false) {
+      if (hamburgerMenu.classList.contains("off")) {
         scrollTop();
         hamburgerMenu.classList.add("on");
         headerNav.classList.add("off");
         btnHamburger.classList.add("hamburger-toggle");
         closeDepth2();
         disableScroll();
-        hamburgerToggle = true;
-      } else if (hamburgerToggle === true) {
+      } else if (hamburgerMenu.classList.contains("on")) {
         scrollTop();
         hamburgerMenu.classList.remove("on");
         headerNav.classList.remove("off");
         btnHamburger.classList.remove("hamburger-toggle");
         enableScroll();
-        hamburgerToggle = false;
       }
     });
 
@@ -69,14 +64,11 @@ window.onload = function () {
     // 언어 토글
     const btnLang = document.querySelector(".lang-button");
     const listLang = document.querySelector(".lang-list");
-    let langToggle = false;
     btnLang.addEventListener("click", () => {
-      if (langToggle === false) {
+      if (listLang.classList.contains("on") == false) {
         listLang.classList.add("on");
-        langToggle = true;
-      } else if (langToggle === true) {
+      } else if (listLang.classList.contains("on") == true) {
         listLang.classList.remove("on");
-        langToggle = false;
       }
     });
 
@@ -86,15 +78,15 @@ window.onload = function () {
     const headerDepth = document.querySelectorAll(".header-gnb > li > .depth2");
     const headerMain = document.querySelector(".header-main");
     const headerBg = document.querySelector(".header-bg");
-    headerGnb.addEventListener("mouseover", () => {
+    headerGnb.addEventListener("mouseenter", () => {
       headerBg.classList.add("on");
       headerMain.classList.add("lineon");
       for (let i = 0; i < headerDepth.length; i++) {
         headerDepth[i].classList.add("on");
       }
     });
-    header.addEventListener("mouseout", () => {
-      headerBg.addEventListener("mouseout", () => {
+    header.addEventListener("mouseleave", () => {
+      headerBg.addEventListener("mouseleave", () => {
         closeDepth2();
       });
     });
@@ -189,4 +181,7 @@ window.onload = function () {
       document.body.style.overflow = "visible";
     }
   }
+
+  // AOS
+  AOS.init();
 };
